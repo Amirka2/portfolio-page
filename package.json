@@ -1,0 +1,38 @@
+{
+  "name": "csu_travelling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.tsx",
+  "scripts": {
+    "start": "webpack serve --env mode=development",
+    "build:dev": "webpack --env mode=development",
+    "build:prod": "webpack --env mode=production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tanstack/react-query": "5.40.1",
+    "axios": "1.7.2",
+    "polished": "4.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "^7.51.5",
+    "react-router-dom": "6.23.1",
+    "styled-components": "6.1.11"
+  },
+  "devDependencies": {
+    "@types/dotenv-webpack": "7.0.7",
+    "@types/node": "20.8.3",
+    "@types/react-dom": "18.3.0",
+    "@types/webpack": "5.28.3",
+    "dotenv-webpack": "8.1.0",
+    "html-webpack-plugin": "5.6.0",
+    "ts-loader": "9.5.0",
+    "ts-node": "10.9.1",
+    "typescript": "5.2.2",
+    "webpack": "5.91.0",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "5.0.4"
+  }
+}

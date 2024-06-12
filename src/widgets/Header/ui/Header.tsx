@@ -9,7 +9,11 @@ export const Header = () => {
   return (
     <SC.Container>
       <SC.Header>
-        <NavMenu />
+        <SC.Wrapper>
+          <SC.MainText>Катерина Дорохова</SC.MainText>
+          <SC.Line />
+          <NavMenu />
+        </SC.Wrapper>
       </SC.Header>
     </SC.Container>
   );

@@ -10,12 +10,18 @@ export const Container = styled.nav`
 `;
 
 export const Link = styled(ReactLink)`
-    padding: 20px;
+    padding: 28px 52px;
     
     text-decoration: none;
-    color: ${Color.Black};
-    font-size: 30px;
     
+    color: ${Color.Black};
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+
+
     &:hover {
         background: ${rgba(Color.Black, .1)};
     }

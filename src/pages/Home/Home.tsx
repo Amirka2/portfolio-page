@@ -1,9 +1,11 @@
 import React from 'react';
 
+import {MainSlider} from "@entities/MainSlider";
+
 export const Home = () => {
   return (
     <div>
-      Home
+      <MainSlider />
     </div>
   );
 };

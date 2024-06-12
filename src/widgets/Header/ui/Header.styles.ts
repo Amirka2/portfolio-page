@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import {Color} from "@shared";
-
 export const Header = styled.header`
     position: fixed;
     top: 0;
@@ -38,11 +36,4 @@ export const MainText = styled.h1`
     font-weight: 400;
     
     text-transform: uppercase;
-`;
-
-export const Line = styled.div`
-    height: 1px;
-    width: 100%;
-    
-    background-color: ${Color.Black};
 `;

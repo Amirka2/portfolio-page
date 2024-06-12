@@ -1,11 +1,15 @@
 import React from 'react';
 
 import {MainSlider} from "@entities/MainSlider";
+import {Bio} from "@entities/bio";
+
+import * as SC from './Home.styles';
 
 export const Home = () => {
   return (
-    <div>
+    <SC.Wrapper>
       <MainSlider />
-    </div>
+      <Bio />
+    </SC.Wrapper>
   );
 };

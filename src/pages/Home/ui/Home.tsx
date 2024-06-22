@@ -1,14 +1,22 @@
-import React from 'react';
+import React from "react";
 
-import {MainSlider} from "@entities/MainSlider";
-import {Bio} from "@entities/bio";
+import { MainSlider } from "@entities/MainSlider";
+import { Bio } from "@entities/bio";
 
-import * as SC from './Home.styles';
+import main from "@static/images/main_background.png";
+
+import * as SC from "./Home.styles";
+
+const photos = [
+  main,
+  "https://img10.reactor.cc/pics/post/full/mignon-Anime-Artist-artist-hentai-art-8064623.jpeg",
+  "https://img10.reactor.cc/pics/post/full/Anime-Kantoku-Tsutsukakushi-Tsukiko-HenNeko-3039075.jpeg",
+];
 
 export const Home = () => {
   return (
     <SC.Wrapper>
-      <MainSlider />
+      <MainSlider photos={photos} />
       <Bio />
     </SC.Wrapper>
   );

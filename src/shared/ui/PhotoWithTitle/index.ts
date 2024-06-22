@@ -1,0 +1,1 @@
+export { PhotoWithTitle } from "./PhotoWithTitle";

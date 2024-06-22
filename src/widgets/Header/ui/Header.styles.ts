@@ -11,6 +11,8 @@ export const Header = styled.header`
     width: 100%;
     
     background: rgba(255, 255, 255, .7);
+
+    z-index: 1000;
 `;
 
 export const Wrapper = styled.div`
@@ -22,7 +24,7 @@ export const Wrapper = styled.div`
     width: fit-content;
 `;
 
-export const Container = styled.header`
+export const Container = styled.div`
     max-width: 1440px;
     margin: 0 auto;
 `;

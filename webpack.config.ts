@@ -45,9 +45,13 @@ export default (env: EnvVariables) => {
           exclude: /node_modules/,
         },
         {
-          test: /\.png/,
+          test: /\.(?:jpg|png|jpeg)$/,
           type: 'asset/resource',
-        }
+        },
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
       ]
     },
     resolve: {

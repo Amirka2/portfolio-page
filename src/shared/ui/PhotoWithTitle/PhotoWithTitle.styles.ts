@@ -1,7 +1,8 @@
 import { Link as BaseLink } from "react-router-dom";
+import { rgba } from "polished";
 import styled from "styled-components";
 
-import { Color } from "@shared/constants";
+import { Color } from "@shared";
 
 export const Link = styled(BaseLink)`
   width: 100%;
@@ -32,7 +33,7 @@ export const Shadow = styled.div`
 
   height: 148px;
 
-  background: rgba(0, 0, 0, 0.5);
+  background: ${rgba(Color.Black, 0.5)};
 `;
 
 export const Text = styled.span`

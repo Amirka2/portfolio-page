@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import {NavMenu} from "@features/nav";
-import {Line} from "@shared";
+import { NavMenu } from "@features/nav";
+import { Line } from "@shared/ui";
 
-import * as SC from './Header.styles';
+import * as SC from "./Header.styles";
 
 export const Header = () => {
-
   return (
     <SC.Container>
       <SC.Header>

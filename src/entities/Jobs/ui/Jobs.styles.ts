@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
-export const Wrapepr = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 100px;
-
-  padding: 64px 80px;
 `;
 
 export const Column = styled.div`

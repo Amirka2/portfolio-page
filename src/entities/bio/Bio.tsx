@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import img from "@static/images/main_background.png";
-import { Color } from "@shared";
+import { Color, Paths } from "@shared";
 import { Button, Container, Line, SubTitle, Text } from "@shared/ui";
 
 import * as SC from "./Bio.styles";
@@ -27,9 +28,11 @@ export const Bio = () => {
               Дата рождения 27 ноября 1983 год в г. Сергиев Посад в семье
               художников.
             </Text>
-            <Button size="M" color={Color.Haki}>
-              Обо мне
-            </Button>
+            <Link to={Paths.About}>
+              <Button size="M" color={Color.Haki}>
+                Обо мне
+              </Button>
+            </Link>
           </SC.TextsList>
         </SC.SideBlock>
         <SC.SideBlock>

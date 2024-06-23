@@ -12,7 +12,7 @@ import { Button, Container, Line, SubTitle, Text } from "@shared/ui";
 import translationEN from "./locales/en/translation.json";
 import translationRU from "./locales/ru/translation.json";
 
-import * as SC from "./Bio.styles";
+import * as SC from "./BioMain.styles";
 
 const resources = {
   en: {
@@ -25,7 +25,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({ resources });
 
-export const Bio = () => {
+export const BioMain = () => {
   const { t } = useTranslation();
 
   return (

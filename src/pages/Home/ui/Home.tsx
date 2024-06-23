@@ -1,7 +1,7 @@
 import React from "react";
 
 import { MainSlider } from "@entities/MainSlider";
-import { Bio } from "@entities/bio";
+import { BioMain } from "@entities/Bio";
 import { Jobs } from "@entities/Jobs";
 
 import main from "@static/images/main_background.png";
@@ -18,7 +18,7 @@ export const Home = () => {
   return (
     <SC.Wrapper>
       <MainSlider photos={photos} />
-      <Bio />
+      <BioMain />
       <Jobs />
     </SC.Wrapper>
   );

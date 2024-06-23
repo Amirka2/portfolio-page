@@ -1,1 +1,2 @@
-export { Bio } from './Bio';
+export * from './About';
+export * from './Main';

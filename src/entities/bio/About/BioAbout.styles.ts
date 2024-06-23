@@ -24,7 +24,6 @@ export const TextWrapper = styled.div`
 export const TextList = styled.ul`
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 22px;
 `;
 

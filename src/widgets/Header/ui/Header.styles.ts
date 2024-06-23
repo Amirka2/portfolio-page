@@ -29,6 +29,17 @@ export const Container = styled.div`
     margin: 0 auto;
 `;
 
+export const TopLine = styled.div`
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+`;
+
+export const Placeholder = styled.div`
+    width: 92px;
+`;
+
 export const MainText = styled.h1`
     padding: 26px;
     

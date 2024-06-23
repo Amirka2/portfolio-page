@@ -1,42 +1,59 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
 import img from "@static/images/main_background.png";
 import { Color, Paths } from "@shared";
 import { Button, Container, Line, SubTitle, Text } from "@shared/ui";
 
+import translationEN from "./locales/en/translation.json";
+import translationRU from "./locales/ru/translation.json";
+
 import * as SC from "./Bio.styles";
 
+const resources = {
+  en: {
+    translation: translationEN,
+  },
+  ru: {
+    translation: translationRU,
+  },
+};
+
+i18n.use(initReactI18next).init({ resources });
+
 export const Bio = () => {
+  const { t } = useTranslation();
+
   return (
     <Container>
       <SC.Wrapper>
         <SC.SideBlock>
-          <SubTitle>Дорохова Екатерина Сергеевна</SubTitle>
+          <SubTitle>{t("name")}</SubTitle>
           <SC.TextsList>
             <Text>
-              Художник и преподаватель Российской Академии Художеств им. И.Е.
-              Репина в г. Санкт-Петербурге с 2012 г.
+              {t("info.0")}
             </Text>
             <Line />
             <Text>
-              Член Союза Художников России с 2010 г. Член Союза Китайских
-              художников и музыкантов в России .
+              {t("info.1")}
             </Text>
             <Line />
             <Text>
-              Дата рождения 27 ноября 1983 год в г. Сергиев Посад в семье
-              художников.
+              {t("info.2")}
             </Text>
             <Link to={Paths.About}>
               <Button size="M" color={Color.Haki}>
-                Обо мне
+                {t("about")}
               </Button>
             </Link>
           </SC.TextsList>
         </SC.SideBlock>
         <SC.SideBlock>
-          <SC.Image src={img} alt="photo" title="АУЕ" />
+          <SC.Image src={img} alt="portrait" title="portrait" />
         </SC.SideBlock>
       </SC.Wrapper>
     </Container>

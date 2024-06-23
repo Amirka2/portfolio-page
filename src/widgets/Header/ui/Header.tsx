@@ -1,7 +1,8 @@
 import React from "react";
 
-import { NavMenu } from "@features/nav";
 import { Line } from "@shared/ui";
+import { NavMenu } from "@features/nav";
+import { LanguageSwitcher } from "@features/LanguageSwitcher";
 
 import * as SC from "./Header.styles";
 
@@ -10,7 +11,11 @@ export const Header = () => {
     <SC.Container>
       <SC.Header>
         <SC.Wrapper>
-          <SC.MainText>Катерина Дорохова</SC.MainText>
+          <SC.TopLine>
+            <SC.Placeholder />
+            <SC.MainText>Катерина Дорохова</SC.MainText>
+            <LanguageSwitcher />
+          </SC.TopLine>
           <Line />
           <NavMenu />
         </SC.Wrapper>

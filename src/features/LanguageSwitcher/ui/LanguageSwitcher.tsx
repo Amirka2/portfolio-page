@@ -3,7 +3,11 @@ import { useTranslation } from "react-i18next";
 
 import * as SC from "./LanguageSwitcher.styles";
 
-export const LanguageSwitcher = () => {
+interface LanguageSwitcherProps {
+  hasChinese?: boolean;
+}
+
+export const LanguageSwitcher = ({ hasChinese }: LanguageSwitcherProps) => {
   const { i18n } = useTranslation();
 
   const language = i18n.language;
@@ -25,6 +29,11 @@ export const LanguageSwitcher = () => {
       <SC.Button onClick={() => handleChange("ru")} isActive={isActive("ru")}>
         RU
       </SC.Button>
+      {hasChinese && (
+        <SC.Button onClick={() => handleChange("cn")} isActive={isActive("cn")}>
+          CN
+        </SC.Button>
+      )}
     </SC.Wrapper>
   );
 };

@@ -5,8 +5,11 @@ import { NavMenu } from "@features/nav";
 import { LanguageSwitcher } from "@features/LanguageSwitcher";
 
 import * as SC from "./Header.styles";
+import { useLocation } from "react-router-dom";
 
 export const Header = () => {
+  const location = useLocation();
+
   return (
     <SC.Container>
       <SC.Header>
@@ -14,7 +17,7 @@ export const Header = () => {
           <SC.TopLine>
             <SC.Placeholder />
             <SC.MainText>Катерина Дорохова</SC.MainText>
-            <LanguageSwitcher />
+            <LanguageSwitcher hasChinese={location.pathname === '/about'}/>
           </SC.TopLine>
           <Line />
           <NavMenu />

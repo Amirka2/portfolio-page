@@ -8,6 +8,7 @@ import { Container, Line, SubTitle, Text } from "@shared/ui";
 
 import translationEN from "./locales/en/translation.json";
 import translationRU from "./locales/ru/translation.json";
+import translationCN from "./locales/cn/translation.json";
 
 import * as SC from "./About.styles";
 
@@ -22,6 +23,9 @@ const resources = {
   },
   ru: {
     translation: translationRU,
+  },
+  cn: {
+    translation: translationCN,
   },
 };
 

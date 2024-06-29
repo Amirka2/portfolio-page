@@ -1,0 +1,1 @@
+export { PhotoWatcher } from './PhotoWatcher';

@@ -1,12 +1,12 @@
 import React, { PropsWithChildren } from "react";
-import SlickSlider from "react-slick";
+import SlickSlider, { Settings } from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import * as SC from './Slider.styles';
 
-const BASE_SETTINGS = {
+const BASE_SETTINGS: Settings = {
   dots: true,
   speed: 500,
   slidesToShow: 1,

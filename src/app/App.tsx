@@ -22,6 +22,7 @@ export const App = () => {
       <QueryClientProvider client={queryClient}>
         <GlobalStyles />
         <Router />
+        <div id="modal-root" />
       </QueryClientProvider>
     </I18nextProvider>
   );

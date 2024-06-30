@@ -6,11 +6,15 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: center;
 
-  margin-top: 68px;
+  margin-top: 16px;
   padding: 24px 0;
   width: 100%;
 
   background: ${Color.Haki};
+
+  ${mediaQueries.gt.Desktop} {
+    margin-top: 64px;
+  }
 `;
 
 export const Wrapper = styled.div`

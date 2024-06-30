@@ -1,30 +1,45 @@
 import styled from "styled-components";
 
+import { mediaQueries } from "@shared";
+
 export const Wrapper = styled.div`
   display: flex;
-  gap: 60px;
+  flex-direction: column;
+  gap: 32px;
 
-  padding: 100px 0;
+  ${mediaQueries.gt.Desktop} {
+    flex-direction: row;
+    gap: 64px;
+  }
 `;
 
 export const SideBlock = styled.div`
   display: flex;
   align-items: center;
 
-  min-height: 800px;
-  width: 50%;
+  ${mediaQueries.gt.Desktop} {
+    width: 50%;
+    min-height: 800px;
+  }
 `;
 
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  gap: 8px;
+
+  ${mediaQueries.gt.Desktop} {
+    gap: 16px;
+  }
 `;
 
 export const TextList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 22px;
+
+  padding-left: 24px;
 `;
 
 export const TextListItem = styled.li`

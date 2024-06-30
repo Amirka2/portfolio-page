@@ -12,7 +12,9 @@ export const Button = styled.button`
   background: transparent;
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{
+  isOpen?: boolean;
+}>`
   position: fixed;
 
   top: 0;
@@ -24,8 +26,15 @@ export const Wrapper = styled.div`
   margin-top: 104px;
 
   background: ${Color.White};
+  transform: translateX(100%);
 
   z-index: 1000000;
+
+  ${({isOpen}) => isOpen && `
+    transform: translateX(0);
+  `}
+
+  transition: transform 300ms;
 `;
 
 export const Links = styled.div`

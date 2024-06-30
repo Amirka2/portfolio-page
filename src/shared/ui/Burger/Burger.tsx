@@ -29,11 +29,9 @@ const BurgerMenu = ({ children }: BurgerProps) => {
       <SC.Button onClick={handleClick}>
         <BurgerIcon />
       </SC.Button>
-      {isOpen && (
-        <SC.Wrapper>
-          <SC.Links>{children}</SC.Links>
-        </SC.Wrapper>
-      )}
+      <SC.Wrapper isOpen={isOpen}>
+        <SC.Links>{children}</SC.Links>
+      </SC.Wrapper>
     </>
   );
 };

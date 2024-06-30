@@ -8,3 +8,4 @@ export * from './Button';
 export * from './Slider';
 export * from './PhotoWithTitle';
 export * from './Modal';
+export * from './Burger';

@@ -1,9 +1,10 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 
-import {Header} from "@widgets/Header";
-import {About, Contacts, Events, Home, Jobs, Publications} from "@pages";
-import {Paths} from "@shared";
+import { Paths } from "@shared";
+import { About, Contacts, Events, Home, Jobs, Publications } from "@pages";
+import { Header } from "@widgets/Header";
+import { Footer } from "@widgets/Footer";
 
 export const Router = () => (
   <BrowserRouter basename={Paths.Main}>
@@ -16,5 +17,6 @@ export const Router = () => (
       <Route path={Paths.Events} element={<Events />} />
       <Route path={Paths.Contacts} element={<Contacts />} />
     </Routes>
+    <Footer />
   </BrowserRouter>
 );

@@ -1,13 +1,19 @@
 import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 
+import { Color } from "@shared";
+
 import * as SC from "./LanguageSwitcher.styles";
 
 interface LanguageSwitcherProps {
   hasChinese?: boolean;
+  color?: string;
 }
 
-export const LanguageSwitcher = ({ hasChinese }: LanguageSwitcherProps) => {
+export const LanguageSwitcher = ({
+  color = Color.Black,
+  hasChinese,
+}: LanguageSwitcherProps) => {
   const { i18n } = useTranslation();
 
   const language = i18n.language;
@@ -23,14 +29,26 @@ export const LanguageSwitcher = ({ hasChinese }: LanguageSwitcherProps) => {
 
   return (
     <SC.Wrapper>
-      <SC.Button onClick={() => handleChange("en")} isActive={isActive("en")}>
+      <SC.Button
+        onClick={() => handleChange("en")}
+        isActive={isActive("en")}
+        color={color}
+      >
         EN
       </SC.Button>
-      <SC.Button onClick={() => handleChange("ru")} isActive={isActive("ru")}>
+      <SC.Button
+        onClick={() => handleChange("ru")}
+        isActive={isActive("ru")}
+        color={color}
+      >
         RU
       </SC.Button>
       {hasChinese && (
-        <SC.Button onClick={() => handleChange("cn")} isActive={isActive("cn")}>
+        <SC.Button
+          onClick={() => handleChange("cn")}
+          isActive={isActive("cn")}
+          color={color}
+        >
           CN
         </SC.Button>
       )}

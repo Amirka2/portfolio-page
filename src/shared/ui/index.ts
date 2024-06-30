@@ -1,3 +1,4 @@
+export * from './Icons';
 export * from './Layout';
 export * from './SubTitle';
 export * from './Text';

@@ -25,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 100%;
         font-family: Inter, sans-serif;
         vertical-align: baseline;
+        scroll-behavior: smooth;
     }
 
     /* make sure to set some focus styles for accessibility */

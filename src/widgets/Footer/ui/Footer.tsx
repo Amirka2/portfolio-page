@@ -1,4 +1,6 @@
 import React from "react";
+import i18n from "i18next";
+import { initReactI18next, useTranslation } from "react-i18next";
 
 import { Color } from "@shared";
 import { ArrowIcon, Container } from "@shared/ui";
@@ -8,7 +10,11 @@ import { Nav } from "./Nav";
 import { Contacts } from "./Contacts";
 import * as SC from "./Footer.styles";
 
+i18n.use(initReactI18next).init({ });
+
 export const Footer = () => {
+  const { t } = useTranslation();
+
   const handleGoTopClick = () => {
     window.scroll(0, 0);
   };
@@ -27,7 +33,7 @@ export const Footer = () => {
           </SC.MainInfo>
           <SC.SubInfo>
             <SC.Caption>
-              © Ekaterina Dorokhova — {new Date().getFullYear()}
+              © {t("Footer.name")} — {new Date().getFullYear()}
             </SC.Caption>
             <LanguageSwitcher color={Color.White} />
           </SC.SubInfo>

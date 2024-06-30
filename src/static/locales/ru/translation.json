@@ -202,5 +202,15 @@
         "publications": "Публикации",
         "events": "События",
         "contacts": "Контакты"
+    },
+    "Footer": {
+        "navigation": "Навигация",
+        "name": "Катерина Дорохова",
+        "main": "Главная",
+        "about": "Об авторе",
+        "jobs": "Работы",
+        "publications": "Публикации",
+        "events": "События",
+        "contacts": "Контакты"
     }
 }

@@ -202,5 +202,15 @@
         "publications": "Publications",
         "events": "Events",
         "contacts": "Contacts"
+    },
+    "Footer": {
+        "navigation": "Navigation",
+        "name": "Katerina Dorokhova",
+        "main": "Main",
+        "about": "About",
+        "jobs": "Jobs",
+        "publications": "Publications",
+        "events": "Events",
+        "contacts": "Contacts"
     }
 }

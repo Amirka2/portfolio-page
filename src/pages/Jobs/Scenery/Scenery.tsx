@@ -5,18 +5,17 @@ import scenery from "@static/images/scenery.jpeg";
 import { Gallery } from "@widgets/Gallery";
 
 import { generateArray } from "../libs";
+import * as GS from "../ui";
 import * as SC from "./Scenery.styles";
 
-const originArray = [
-  scenery,
-];
+const originArray = [scenery];
 
 const photos = generateArray(originArray, 100);
 
 export const Scenery = () => {
   return (
-    <SC.Wrapper>
+    <GS.Wrapper>
       <Gallery photos={photos} />
-    </SC.Wrapper>
+    </GS.Wrapper>
   );
 };

@@ -5,6 +5,7 @@ import study from "@static/images/studywork.jpeg";
 import { Gallery } from "@widgets/Gallery";
 
 import { generateArray } from "../libs";
+import * as GS from "../ui";
 import * as SC from "./Study.styles";
 
 const originArray = [
@@ -15,8 +16,8 @@ const photos = generateArray(originArray, 100);
 
 export const Study = () => {
   return (
-    <SC.Wrapper>
+    <GS.Wrapper>
       <Gallery photos={photos} />
-    </SC.Wrapper>
+    </GS.Wrapper>
   );
 };

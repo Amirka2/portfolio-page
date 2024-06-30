@@ -1,1 +1,1 @@
-export { Jobs } from './Jobs';
+export * from './styles';

@@ -5,6 +5,7 @@ import graphics from "@static/images/graphics.jpeg";
 import { Gallery } from "@widgets/Gallery";
 
 import { generateArray } from "../libs";
+import * as GS from "../ui";
 import * as SC from "./Graphics.styles";
 
 const originArray = [
@@ -15,8 +16,8 @@ const photos = generateArray(originArray, 100);
 
 export const Graphics = () => {
   return (
-    <SC.Wrapper>
+    <GS.Wrapper>
       <Gallery photos={photos} />
-    </SC.Wrapper>
+    </GS.Wrapper>
   );
 };

@@ -193,5 +193,14 @@
                 "text": "participation in the exhibition of women artists 'Through the Eyes of Mom' at the Novgorod Center for Contemporary Art, Veliky Novgorod."
             }
         ]
+    },
+    "Header": {
+        "name": "Katerina Dorokhova",
+        "main": "Main",
+        "about": "About",
+        "jobs": "Jobs",
+        "publications": "Publications",
+        "events": "Events",
+        "contacts": "Contacts"
     }
 }

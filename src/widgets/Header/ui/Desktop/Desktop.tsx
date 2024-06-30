@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
+import { Paths } from "@shared";
 import { Line } from "@shared/ui";
 import { useTranslation } from "@shared/hooks";
 import { NavMenu } from "@features/nav";
@@ -19,7 +20,7 @@ export const Desktop = () => {
           <SC.TopLine>
             <SC.Placeholder />
             <SC.MainText>{t("Header.name")}</SC.MainText>
-            <LanguageSwitcher hasChinese={location.pathname === '/about'}/>
+            <LanguageSwitcher hasChinese={location.pathname === Paths.About}/>
           </SC.TopLine>
           <Line />
           <NavMenu />

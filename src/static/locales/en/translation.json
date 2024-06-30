@@ -212,5 +212,11 @@
         "publications": "Publications",
         "events": "Events",
         "contacts": "Contacts"
+    },
+    "Contacts": {
+        "name": "Katerina Dorokhova Sergeevna",
+        "caption": "Got questions? Text me",
+        "phone": "Phone",
+        "email": "Email"
     }
 }

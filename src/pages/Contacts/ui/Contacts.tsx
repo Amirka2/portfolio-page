@@ -9,25 +9,28 @@ import {
   TelegramIcon,
   WhatsappIcon,
 } from "@shared/ui";
+import { useTranslation } from "@shared/hooks";
 
 import * as SC from "./Contacts.styles";
 
 export const Contacts = () => {
+  const { t } = useTranslation();
+
   return (
     <Container>
       <SC.Wrapper>
         <SC.Main>
           <SC.Image src={img} alt="contacts image" />
           <SC.Info>
-            <SubTitle>Дорохова Екатерина Сергеевна</SubTitle>
+            <SubTitle>{t("Contacts.name")}</SubTitle>
             <Line />
-            <strong>Остались вопросы? Свяжитесь со мной</strong>
+            <strong>{t("Contacts.caption")}</strong>
             <SC.Text>
-              Телефон:&nbsp;
+              {t("Contacts.phone")}:&nbsp;
               <SC.Link href="tel:899999999">+7(921) 39-79-888</SC.Link>
             </SC.Text>
             <SC.Text>
-              Email:&nbsp;
+              {t("Contacts.email")}:&nbsp;
               <SC.Link href="mailto:ketrina@mail.ru">ketrina@mail.ru</SC.Link>
             </SC.Text>
             <SC.SocialLinks>

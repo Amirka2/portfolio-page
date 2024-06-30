@@ -6,9 +6,9 @@ import { initReactI18next, useTranslation } from "react-i18next";
 import { BioAbout } from "@entities/Bio";
 import { Container, Line, SubTitle, Text } from "@shared/ui";
 
-import translationEN from "./locales/en/translation.json";
-import translationRU from "./locales/ru/translation.json";
-import translationCN from "./locales/cn/translation.json";
+import translationEN from "@static/locales/en/translation.json";
+import translationRU from "@static/locales/ru/translation.json";
+import translationCN from "@static/locales/cn/translation.json";
 
 import * as SC from "./About.styles";
 
@@ -34,8 +34,8 @@ i18n.use(initReactI18next).init({ resources });
 export const About = () => {
   const { t } = useTranslation();
 
-  const studyData = t("studyData", { returnObjects: true }) as Array<TextData>;
-  const achievementsData = t("achievementsData", {
+  const studyData = t("About.studyData", { returnObjects: true }) as Array<TextData>;
+  const achievementsData = t("About.achievementsData", {
     returnObjects: true,
   }) as Array<TextData>;
 
@@ -44,7 +44,7 @@ export const About = () => {
       <BioAbout />
       <Container>
         <SC.InfoWrapper>
-          <SubTitle>{t("study")}</SubTitle>
+          <SubTitle>{t("About.study")}</SubTitle>
           <Line />
           <SC.TextWrapper>
             {studyData.map((studyEl) => (
@@ -58,7 +58,7 @@ export const About = () => {
         </SC.InfoWrapper>
 
         <SC.InfoWrapper>
-          <SubTitle>{t("achievements")}</SubTitle>
+          <SubTitle>{t("About.achievements")}</SubTitle>
           <Line />
           <SC.TextWrapper>
             {achievementsData.map((achievementEl) => (

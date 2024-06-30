@@ -8,7 +8,7 @@ import * as SC from "./BioAbout.styles";
 
 export const BioAbout = () => {
   const { t } = useTranslation();
-  const info = t("info", { returnObjects: true }) as Array<string>;
+  const info = t("About.info", { returnObjects: true }) as Array<string>;
 
   return (
     <Container>
@@ -18,7 +18,7 @@ export const BioAbout = () => {
         </SC.SideBlock>
         <SC.SideBlock>
           <SC.TextWrapper>
-            <SubTitle>{t("name")}</SubTitle>
+            <SubTitle>{t("About.name")}</SubTitle>
             <Line />
             <SC.TextList>
               {info.map((infoEl) => (

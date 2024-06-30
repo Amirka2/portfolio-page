@@ -9,21 +9,10 @@ import img from "@static/images/main_photo.jpeg";
 import { Color, Paths } from "@shared";
 import { Button, Container, Line, SubTitle, Text } from "@shared/ui";
 
-import translationEN from "./locales/en/translation.json";
-import translationRU from "./locales/ru/translation.json";
-
 import * as SC from "./BioMain.styles";
 
-const resources = {
-  en: {
-    translation: translationEN,
-  },
-  ru: {
-    translation: translationRU,
-  },
-};
 
-i18n.use(initReactI18next).init({ resources });
+i18n.use(initReactI18next).init({ });
 
 export const BioMain = () => {
   const { t } = useTranslation();
@@ -32,22 +21,22 @@ export const BioMain = () => {
     <Container>
       <SC.Wrapper>
         <SC.SideBlock>
-          <SubTitle>{t("name")}</SubTitle>
+          <SubTitle>{t("Main.name")}</SubTitle>
           <SC.TextsList>
             <Text>
-              {t("info.0")}
+              {t("Main.info.0")}
             </Text>
             <Line />
             <Text>
-              {t("info.1")}
+              {t("Main.info.1")}
             </Text>
             <Line />
             <Text>
-              {t("info.2")}
+              {t("Main.info.2")}
             </Text>
             <Link to={Paths.About}>
               <Button size="M" color={Color.Haki}>
-                {t("about")}
+                {t("Main.about")}
               </Button>
             </Link>
           </SC.TextsList>

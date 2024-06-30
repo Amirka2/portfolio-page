@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import img from "@static/images/main_background.png";
+import img from "@static/images/main_photo.jpeg";
 import { Color, Paths } from "@shared";
 import { Button, Container, Line, SubTitle, Text } from "@shared/ui";
 

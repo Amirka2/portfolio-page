@@ -1,6 +1,6 @@
 import React from "react";
 
-import img from "@static/images/contacts_image.jpeg";
+import img from "@static/images/graphics.jpeg";
 import { Color } from "@shared";
 import {
   Container,

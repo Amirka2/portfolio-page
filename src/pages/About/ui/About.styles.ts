@@ -7,12 +7,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   gap: 32px;
 
-  margin-top: 104px;
-
   ${mediaQueries.gt.Desktop} {
     gap: 64px;
-
-    margin-top: 200px;
   }
 `;
 

@@ -20,7 +20,6 @@ export const Wrapper = styled.div`
 
   width: 90%;
   height: 100%;
-  // Header height
   margin-top: 104px;
 
   background: ${Color.White};

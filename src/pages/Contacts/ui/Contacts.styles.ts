@@ -7,12 +7,6 @@ import { TelegramIcon, WhatsappIcon } from "@shared/ui";
 export const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
-
-  margin-top: 104px;
-
-  ${mediaQueries.gt.Desktop} {
-    margin-top: 200px;
-  }
 `;
 
 export const Main = styled.section`

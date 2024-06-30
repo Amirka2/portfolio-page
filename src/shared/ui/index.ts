@@ -9,3 +9,4 @@ export * from './Slider';
 export * from './PhotoWithTitle';
 export * from './Modal';
 export * from './Burger';
+export * from './PageWrapper';

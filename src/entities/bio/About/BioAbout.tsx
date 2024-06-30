@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import img from "@static/images/main_photo.jpeg";
 import { Container, Line, SubTitle, Text } from "@shared/ui";
-import img from "@static/images/main_background.png";
 
 import * as SC from "./BioAbout.styles";
 

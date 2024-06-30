@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
   right: 0;
 
   width: 90%;
+  max-width: 400px;
   height: 100%;
   margin-top: 104px;
 

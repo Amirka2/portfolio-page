@@ -12,6 +12,12 @@ export const Header = styled.h5`
   margin-bottom: 24px;
 `;
 
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+`;
+
 export const Contacts = styled.div`
   display: flex;
   flex-direction: column;
@@ -46,4 +52,15 @@ export const ContactButton = styled.a`
   &:hover {
     filter: brightness(1.5);
   }
+`;
+
+export const TextLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+export const SocialLinks = styled.div`
+  display: flex;
+  gap: 8px;
 `;

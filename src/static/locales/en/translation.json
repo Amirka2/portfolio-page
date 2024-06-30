@@ -199,6 +199,11 @@
         "main": "Main",
         "about": "About",
         "jobs": "Jobs",
+        "jobsSceneries": "Sceneries",
+        "jobsStillLifes": "Still lifes",
+        "jobsArtWorks": "Art works",
+        "jobsStudyWorks": "Study works",
+        "jobsGraphics": "Graphics",
         "publications": "Publications",
         "events": "Events",
         "contacts": "Contacts"

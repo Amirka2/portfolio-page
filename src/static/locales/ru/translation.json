@@ -199,6 +199,11 @@
         "main": "Главная",
         "about": "Об авторе",
         "jobs": "Работы",
+        "jobsSceneries": "Пейзажи",
+        "jobsStillLifes": "Натюрморты",
+        "jobsArtWorks": "Творческие работы",
+        "jobsStudyWorks": "Учебные работы",
+        "jobsGraphics": "Графика",
         "publications": "Публикации",
         "events": "События",
         "contacts": "Контакты"

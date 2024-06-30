@@ -1,3 +1,4 @@
+import { mediaQueries } from "@shared";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -12,7 +13,12 @@ export const Column = styled.div`
   gap: 24px;
 `;
 
-export const Row = styled.div`
+export const Line = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 24px;
+
+  ${mediaQueries.gt.Desktop} {
+    flex-direction: row;
+  }
 `;

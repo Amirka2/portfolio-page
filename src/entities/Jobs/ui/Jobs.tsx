@@ -8,9 +8,9 @@ import graphics from "@static/images/graphics.jpeg";
 
 import { Paths } from "@shared";
 import { Container, PhotoWithTitle, SubTitle } from "@shared/ui";
+import { useTranslation } from "@shared/hooks";
 
 import * as SC from "./Jobs.styles";
-import { useTranslation } from "@shared/hooks";
 
 export const Jobs = () => {
   const { t } = useTranslation();
@@ -20,25 +20,25 @@ export const Jobs = () => {
       <SC.Wrapper>
         <SubTitle>{t("Main.myJobsTitle")}</SubTitle>
         <SC.Column>
-          <SC.Row>
+          <SC.Line>
             <PhotoWithTitle to={Paths.JobsScenery} img={scenery}>
-            {t("Main.sceneries")}
+              {t("Main.sceneries")}
             </PhotoWithTitle>
             <PhotoWithTitle to={Paths.JobsStillLife} img={stillLife}>
-            {t("Main.stillLifes")}
+              {t("Main.stillLifes")}
             </PhotoWithTitle>
-          </SC.Row>
-          <SC.Row>
+          </SC.Line>
+          <SC.Line>
             <PhotoWithTitle to={Paths.JobsArt} img={art}>
-            {t("Main.artWorks")}
+              {t("Main.artWorks")}
             </PhotoWithTitle>
             <PhotoWithTitle to={Paths.JobsStudy} img={study}>
-            {t("Main.studyWorks")}
+              {t("Main.studyWorks")}
             </PhotoWithTitle>
             <PhotoWithTitle to={Paths.JobsGraphics} img={graphics}>
-            {t("Main.graphics")}
+              {t("Main.graphics")}
             </PhotoWithTitle>
-          </SC.Row>
+          </SC.Line>
         </SC.Column>
       </SC.Wrapper>
     </Container>

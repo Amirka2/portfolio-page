@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { rgba } from "polished";
 
-import { Color } from "@shared";
+import { Color, mediaQueries } from "@shared";
 
 export const Header = styled.h5`
   font-size: 14px;
@@ -15,7 +15,16 @@ export const Header = styled.h5`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 64px;
+
+  height: 100%;
+
+  ${mediaQueries.gt.Desktop} {
+    justify-content: flex-start;
+
+    height: auto;
+  }
 `;
 
 export const Contacts = styled.div`

@@ -369,4 +369,7 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0.2em 0;
     }
 
+    html {
+        border: 1px solid #737C70;
+    }
 `;

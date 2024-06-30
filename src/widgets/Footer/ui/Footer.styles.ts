@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Color } from "@shared";
+import { Color, mediaQueries } from "@shared";
 
 export const Footer = styled.footer`
   display: flex;
@@ -24,15 +24,24 @@ export const Wrapper = styled.div`
 
 export const MainInfo = styled.div`
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
+
+  ${mediaQueries.gt.Desktop} {
+    flex-direction: row;
+  }
 `;
 
 export const ContactsWrapper = styled.div`
+  ${mediaQueries.gt.Desktop} {
     flex-grow: 2;
+  }
 `;
 
 export const NavigationWrapper = styled.div`
+  ${mediaQueries.gt.Desktop} {
     flex-grow: 1.5;
+  }
 `;
 
 export const SubInfo = styled.div`

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import img from "@static/images/main_photo.jpeg";
+
 import { Color, Paths } from "@shared";
 import { Button, Container, Line, SubTitle, Text } from "@shared/ui";
 import { useTranslation } from "@shared/hooks";

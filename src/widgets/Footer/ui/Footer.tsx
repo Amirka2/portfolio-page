@@ -1,16 +1,13 @@
 import React from "react";
-import i18n from "i18next";
-import { initReactI18next, useTranslation } from "react-i18next";
 
 import { Color } from "@shared";
 import { ArrowIcon, Container } from "@shared/ui";
+import { useTranslation } from "@shared/hooks";
 import { LanguageSwitcher } from "@features/LanguageSwitcher";
 
 import { Nav } from "./Nav";
 import { Contacts } from "./Contacts";
 import * as SC from "./Footer.styles";
-
-i18n.use(initReactI18next).init({ });
 
 export const Footer = () => {
   const { t } = useTranslation();

@@ -1,18 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
 
 import img from "@static/images/main_photo.jpeg";
 import { Color, Paths } from "@shared";
 import { Button, Container, Line, SubTitle, Text } from "@shared/ui";
+import { useTranslation } from "@shared/hooks";
 
 import * as SC from "./BioMain.styles";
-
-
-i18n.use(initReactI18next).init({ });
 
 export const BioMain = () => {
   const { t } = useTranslation();

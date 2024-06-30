@@ -1,15 +1,12 @@
 import React from "react";
-import i18n from "i18next";
-import { initReactI18next, useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 import { Line } from "@shared/ui";
+import { useTranslation } from "@shared/hooks";
 import { NavMenu } from "@features/nav";
 import { LanguageSwitcher } from "@features/LanguageSwitcher";
 
 import * as SC from "./Header.styles";
-import { useLocation } from "react-router-dom";
-
-i18n.use(initReactI18next).init({ });
 
 export const Header = () => {
   const { t } = useTranslation();

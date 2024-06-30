@@ -1,6 +1,4 @@
 import React from "react";
-import i18n from "i18next";
-import { initReactI18next, useTranslation } from "react-i18next";
 
 import scenery from "@static/images/scenery.jpeg";
 import stillLife from "@static/images/stil_life.jpeg";
@@ -12,8 +10,7 @@ import { Paths } from "@shared";
 import { Container, PhotoWithTitle, SubTitle } from "@shared/ui";
 
 import * as SC from "./Jobs.styles";
-
-i18n.use(initReactI18next).init({ });
+import { useTranslation } from "@shared/hooks";
 
 export const Jobs = () => {
   const { t } = useTranslation();

@@ -1,10 +1,8 @@
 import React from "react";
 
-import i18n from "i18next";
-import { initReactI18next, useTranslation } from "react-i18next";
-
 import { BioAbout } from "@entities/Bio";
 import { Container, Line, SubTitle, Text } from "@shared/ui";
+import { useTranslation } from "@shared/hooks";
 
 import * as SC from "./About.styles";
 
@@ -12,8 +10,6 @@ interface TextData {
   year: string;
   text: string;
 }
-
-i18n.use(initReactI18next).init({ });
 
 export const About = () => {
   const { t } = useTranslation();

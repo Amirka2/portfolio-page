@@ -1,12 +1,9 @@
 import React from "react";
-import i18n from "i18next";
-import { initReactI18next, useTranslation } from "react-i18next";
 
 import { Paths } from "@shared";
+import { useTranslation } from "@shared/hooks";
 
 import * as SC from "./Nav.styles";
-
-i18n.use(initReactI18next).init({ });
 
 export const Nav = () => {
   const { t } = useTranslation();

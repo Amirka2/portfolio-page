@@ -1,13 +1,12 @@
 import React from "react";
 
 import img from "@static/images/graphics.jpeg";
+
 import { Color } from "@shared";
 import {
   Container,
   Line,
   SubTitle,
-  TelegramIcon,
-  WhatsappIcon,
 } from "@shared/ui";
 import { useTranslation } from "@shared/hooks";
 
@@ -35,10 +34,10 @@ export const Contacts = () => {
             </SC.Text>
             <SC.SocialLinks>
               <SC.ContactButton href="https://t.me/">
-                <TelegramIcon color={Color.Black} width={34} height={28} />
+                <SC.Telegram color={Color.Black} />
               </SC.ContactButton>
               <SC.ContactButton href="/">
-                <WhatsappIcon color={Color.Black} width={30} height={28} />
+                <SC.Whatsapp color={Color.Black} />
               </SC.ContactButton>
             </SC.SocialLinks>
           </SC.Info>

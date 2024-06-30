@@ -1,10 +1,11 @@
 import React from "react";
 
-import peysage from "@static/images/peysage.jpeg";
-import naturmort from "@static/images/naturmort.jpeg";
-import artwork from "@static/images/artwork.png";
-import studywork from "@static/images/studywork.jpeg";
+import scenery from "@static/images/scenery.jpeg";
+import stillLife from "@static/images/stil_life.jpeg";
+import art from "@static/images/artwork.png";
+import study from "@static/images/studywork.jpeg";
 import graphics from "@static/images/graphics.jpeg";
+
 import { Paths } from "@shared";
 import { Container, PhotoWithTitle, SubTitle } from "@shared/ui";
 
@@ -17,18 +18,18 @@ export const Jobs = () => {
         <SubTitle>Мои работы</SubTitle>
         <SC.Column>
           <SC.Row>
-            <PhotoWithTitle to={Paths.JobsPeysage} img={peysage}>
+            <PhotoWithTitle to={Paths.JobsScenery} img={scenery}>
               Пейзажи
             </PhotoWithTitle>
-            <PhotoWithTitle to={Paths.JobsNaturmort} img={naturmort}>
+            <PhotoWithTitle to={Paths.JobsStillLife} img={stillLife}>
               Натюрморт
             </PhotoWithTitle>
           </SC.Row>
           <SC.Row>
-            <PhotoWithTitle to={Paths.JobsArt} img={artwork}>
+            <PhotoWithTitle to={Paths.JobsArt} img={art}>
               Творческие работы
             </PhotoWithTitle>
-            <PhotoWithTitle to={Paths.JobsStudy} img={studywork}>
+            <PhotoWithTitle to={Paths.JobsStudy} img={study}>
               Учебные работы
             </PhotoWithTitle>
             <PhotoWithTitle to={Paths.JobsGraphics} img={graphics}>

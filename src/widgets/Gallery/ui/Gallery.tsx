@@ -1,17 +1,27 @@
 import React, { useState } from "react";
 
 import { PhotoWatcher } from "@entities/PhotoWatch";
+import { usePhotoColumns } from "@shared/hooks";
 
-import { sortPhotos } from "../libs";
 import * as SC from "./Gallery.styles";
 
 interface GalleryProps {
+  minWidth?: number;
+  maxWidth?: number;
   photos?: Array<string>;
 }
 
-export const Gallery = ({ photos }: GalleryProps) => {
+export const Gallery = ({
+  photos,
+  minWidth = 375,
+  maxWidth = 500,
+}: GalleryProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState<any>(null);
+  const [active, setActive] = useState<string | null>(null);
+  const [sortedPhotos] = usePhotoColumns({
+    photos,
+    minWidth,
+  });
 
   const handleClick = (photo: any) => {
     setActive(photo);
@@ -23,41 +33,21 @@ export const Gallery = ({ photos }: GalleryProps) => {
     setIsOpen(false);
   };
 
-  const sortedPhotos = sortPhotos(photos);
-
   return (
-    <div>
+    <>
       <SC.PhotosWrapper>
-        <SC.PhotosColumn>
-          {sortedPhotos.first.map((photo) => (
-            <SC.Image
-              onClick={() => handleClick(photo)}
-              alt="img1"
-              src={photo}
-              title='Название длинное и сложное. Very very long description'
-            />
-          ))}
-        </SC.PhotosColumn>
-        <SC.PhotosColumn>
-          {sortedPhotos.second.map((photo) => (
-            <SC.Image
-              onClick={() => handleClick(photo)}
-              alt="img1"
-              src={photo}
-              title='Название длинное и сложное. Very very long description'
-            />
-          ))}
-        </SC.PhotosColumn>
-        <SC.PhotosColumn>
-          {sortedPhotos.third.map((photo) => (
-            <SC.Image
-              onClick={() => handleClick(photo)}
-              alt="img1"
-              src={photo}
-              title='Название длинное и сложное. Very very long description'
-            />
-          ))}
-        </SC.PhotosColumn>
+        {sortedPhotos?.map((column: any) => (
+          <SC.PhotosColumn maxWidth={maxWidth}>
+            {column.map((photo: string) => (
+              <SC.Image
+                onClick={() => handleClick(photo)}
+                alt="img1"
+                src={photo}
+                title="Название длинное и сложное. Very very long description"
+              />
+            ))}
+          </SC.PhotosColumn>
+        ))}
       </SC.PhotosWrapper>
       <PhotoWatcher
         isOpen={isOpen}
@@ -65,6 +55,6 @@ export const Gallery = ({ photos }: GalleryProps) => {
         photos={photos}
         activePhoto={active}
       />
-    </div>
+    </>
   );
 };

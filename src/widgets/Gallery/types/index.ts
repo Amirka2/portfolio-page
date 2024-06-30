@@ -1,5 +1,1 @@
-export interface SortedPhotos {
-  first: string[];
-  second: string[];
-  third: string[];
-}
+export interface SortedPhotos extends Array<string[]> {}

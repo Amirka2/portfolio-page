@@ -1,4 +1,6 @@
 import React from "react";
+import i18n from "i18next";
+import { initReactI18next, useTranslation } from "react-i18next";
 
 import scenery from "@static/images/scenery.jpeg";
 import stillLife from "@static/images/stil_life.jpeg";
@@ -11,29 +13,33 @@ import { Container, PhotoWithTitle, SubTitle } from "@shared/ui";
 
 import * as SC from "./Jobs.styles";
 
+i18n.use(initReactI18next).init({ });
+
 export const Jobs = () => {
+  const { t } = useTranslation();
+
   return (
     <Container>
       <SC.Wrapper>
-        <SubTitle>Мои работы</SubTitle>
+        <SubTitle>{t("Main.myJobsTitle")}</SubTitle>
         <SC.Column>
           <SC.Row>
             <PhotoWithTitle to={Paths.JobsScenery} img={scenery}>
-              Пейзажи
+            {t("Main.sceneries")}
             </PhotoWithTitle>
             <PhotoWithTitle to={Paths.JobsStillLife} img={stillLife}>
-              Натюрморт
+            {t("Main.stillLifes")}
             </PhotoWithTitle>
           </SC.Row>
           <SC.Row>
             <PhotoWithTitle to={Paths.JobsArt} img={art}>
-              Творческие работы
+            {t("Main.artWorks")}
             </PhotoWithTitle>
             <PhotoWithTitle to={Paths.JobsStudy} img={study}>
-              Учебные работы
+            {t("Main.studyWorks")}
             </PhotoWithTitle>
             <PhotoWithTitle to={Paths.JobsGraphics} img={graphics}>
-              Графика
+            {t("Main.graphics")}
             </PhotoWithTitle>
           </SC.Row>
         </SC.Column>

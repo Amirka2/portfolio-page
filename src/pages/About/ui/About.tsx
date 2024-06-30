@@ -6,10 +6,6 @@ import { initReactI18next, useTranslation } from "react-i18next";
 import { BioAbout } from "@entities/Bio";
 import { Container, Line, SubTitle, Text } from "@shared/ui";
 
-import translationEN from "@static/locales/en/translation.json";
-import translationRU from "@static/locales/ru/translation.json";
-import translationCN from "@static/locales/cn/translation.json";
-
 import * as SC from "./About.styles";
 
 interface TextData {
@@ -17,19 +13,7 @@ interface TextData {
   text: string;
 }
 
-const resources = {
-  en: {
-    translation: translationEN,
-  },
-  ru: {
-    translation: translationRU,
-  },
-  cn: {
-    translation: translationCN,
-  },
-};
-
-i18n.use(initReactI18next).init({ resources });
+i18n.use(initReactI18next).init({ });
 
 export const About = () => {
   const { t } = useTranslation();

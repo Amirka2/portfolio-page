@@ -6,7 +6,13 @@
             "Member of the Union of Artists of Russia since 2010. Member of the Union of Chinese Artists and Musicians in Russia.",
             "Date of birth November 27, 1983 in Sergiev Posad in a family of artists."
         ],
-        "about": "About me"
+        "about": "About me",
+        "myJobsTitle": "My jobs",
+        "sceneries": "Sceneries",
+        "stillLifes": "Still lifes",
+        "artWorks": "Art works",
+        "studyWorks": "Study works",
+        "graphics": "Graphics"
     },
     "About": {
         "name": "Dorokhova Katerina Sergeevna",

@@ -4,7 +4,11 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 32px;
+
+  ${mediaQueries.gt.Desktop} {
+    gap: 100px;
+  }
 `;
 
 export const Column = styled.div`

@@ -1,30 +1,35 @@
 import React, { useState } from "react";
 
-import { PhotoWatcher } from "@entities/PhotoWatch";
-import { usePhotoColumns } from "@shared/hooks";
 import { getPhotoPath } from "@shared/libs";
+import { useTranslation } from "@shared/hooks";
+import { PhotoWatcher } from "@entities/PhotoWatch";
+import type { Work } from "@entities/Work";
 
+import { usePhotoColumns } from "../hooks";
 import * as SC from "./Gallery.styles";
 
 interface GalleryProps {
+  category: string;
   minWidth?: number;
   maxWidth?: number;
-  photos?: Array<string>;
+  photos?: Array<Work>;
 }
 
 export const Gallery = ({
+  category,
   photos,
   minWidth = 375,
   maxWidth = 500,
 }: GalleryProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState<string | null>(null);
+  const [active, setActive] = useState<Work | null>(null);
   const [sortedPhotos] = usePhotoColumns({
     photos,
     minWidth,
   });
+  const { t } = useTranslation();
 
-  const handleClick = (photo: any) => {
+  const handleClick = (photo: Work) => {
     setActive(photo);
     setIsOpen(true);
   };
@@ -37,14 +42,14 @@ export const Gallery = ({
   return (
     <>
       <SC.PhotosWrapper>
-        {sortedPhotos?.map((column: any) => (
+        {sortedPhotos?.map((column) => (
           <SC.PhotosColumn maxWidth={maxWidth}>
-            {column.map((photo: string) => (
+            {column.map((work) => (
               <SC.Image
-                onClick={() => handleClick(photo)}
-                alt="img1"
-                src={getPhotoPath(photo)}
-                title="Название длинное и сложное. Very very long description"
+                onClick={() => handleClick(work)}
+                alt={t(`${category}.${work.id}`)}
+                src={getPhotoPath(work.name)}
+                title={t(`${category}.${work.id}`)}
               />
             ))}
           </SC.PhotosColumn>

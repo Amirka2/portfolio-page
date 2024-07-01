@@ -4,11 +4,11 @@ import { Gallery } from "@widgets/Gallery";
 
 import * as GS from "../../ui";
 
-import { useSceneries } from "../api";
-import * as SC from "./Scenery.styles";
+import { useStillLifes } from "../api";
+import * as SC from "./StillLife.styles";
 
-export const Scenery = () => {
-  const { data, isPending, isError } = useSceneries();
+export const StillLife = () => {
+  const { data, isPending, isError } = useStillLifes();
 
   if (isPending) {
     return <>loading</>

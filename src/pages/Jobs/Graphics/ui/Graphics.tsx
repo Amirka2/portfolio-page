@@ -4,11 +4,11 @@ import { Gallery } from "@widgets/Gallery";
 
 import * as GS from "../../ui";
 
-import { useSceneries } from "../api";
-import * as SC from "./Scenery.styles";
+import { useGraphics } from "../api";
+import * as SC from "./Graphics.styles";
 
-export const Scenery = () => {
-  const { data, isPending, isError } = useSceneries();
+export const Graphics = () => {
+  const { data, isPending, isError } = useGraphics();
 
   if (isPending) {
     return <>loading</>

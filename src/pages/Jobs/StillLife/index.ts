@@ -1,1 +1,1 @@
-export { StillLife as StillLifeJobs } from './StillLife';
+export * from './ui';

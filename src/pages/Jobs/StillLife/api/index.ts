@@ -6,13 +6,13 @@ import { API_PATH } from "@shared";
 
 import { selectPhotos } from "../../libs";
 
-const SCENERY_ID = 3;
+const STILL_LIFE_ID = 2;
 
-const getSceneryPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork?category_id=${SCENERY_ID}`);
+const getStillLifePhotos = () => axios.get<Work[]>(`${API_PATH}/artwork?category_id=${STILL_LIFE_ID}`);
 
-export const useSceneries = () => useQuery({
-    queryKey: ['photos', 'scenery'],
-    queryFn: getSceneryPhotos,
+export const useStillLifes = () => useQuery({
+    queryKey: ['photos', 'still-life'],
+    queryFn: getStillLifePhotos,
     refetchOnMount: false,
     refetchOnWindowFocus: false,
     select: selectPhotos

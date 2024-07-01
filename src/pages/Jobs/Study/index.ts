@@ -1,1 +1,1 @@
-export { Study as StudyJobs } from './Study';
+export * from './ui';

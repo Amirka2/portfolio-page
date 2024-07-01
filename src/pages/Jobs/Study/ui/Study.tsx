@@ -4,11 +4,11 @@ import { Gallery } from "@widgets/Gallery";
 
 import * as GS from "../../ui";
 
-import { useSceneries } from "../api";
-import * as SC from "./Scenery.styles";
+import { useStudyWorks } from "../api";
+import * as SC from "./Study.styles";
 
-export const Scenery = () => {
-  const { data, isPending, isError } = useSceneries();
+export const Study = () => {
+  const { data, isPending, isError } = useStudyWorks();
 
   if (isPending) {
     return <>loading</>

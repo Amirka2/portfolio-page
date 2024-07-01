@@ -1,18 +1,18 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-import { Work } from "@entities/Work";
 import { API_PATH } from "@shared";
+import { Work } from "@entities/Work";
 
 import { selectPhotos } from "../../libs";
 
-const SCENERY_ID = 3;
+const STUDY_WORK_ID = 5;
 
-const getSceneryPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork?category_id=${SCENERY_ID}`);
+const getStudyWorkPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork?category_id=${STUDY_WORK_ID}`);
 
-export const useSceneries = () => useQuery({
+export const useStudyWorks = () => useQuery({
     queryKey: ['photos', 'scenery'],
-    queryFn: getSceneryPhotos,
+    queryFn: getStudyWorkPhotos,
     refetchOnMount: false,
     refetchOnWindowFocus: false,
     select: selectPhotos

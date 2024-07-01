@@ -1,1 +1,1 @@
-export { Art as ArtJobs } from './Art';
+export * from './ui';

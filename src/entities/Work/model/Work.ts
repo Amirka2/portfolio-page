@@ -1,4 +1,4 @@
-export type PhotoType = "VERTICAL" | "HORIZONTAL" | "SQUARE";
+export type PhotoRatioType = "VERTICAL" | "HORIZONTAL" | "SQUARE";
 export type LanguageType = "EN" | "RU";
 
 export interface DescriptionModel {
@@ -9,6 +9,6 @@ export interface DescriptionModel {
 export interface Work {
   id: number;
   name: string;
-  position: PhotoType;
+  position: PhotoRatioType;
   descriptions: DescriptionModel[];
 }

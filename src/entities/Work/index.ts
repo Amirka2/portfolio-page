@@ -1,2 +1,2 @@
 export * from './libs';
-export * from './model';
+export type { Work, LanguageType, PhotoRatioType, DescriptionModel } from './model';

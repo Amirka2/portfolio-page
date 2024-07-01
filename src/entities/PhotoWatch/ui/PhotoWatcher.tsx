@@ -21,10 +21,8 @@ export const PhotoWatcher = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose} withOverlay={false}>
       <SC.Wrapper>
-        <SC.SliderWrapper>
-          <SecondarySlider photos={photos} />
-          {/* slider */}
-        </SC.SliderWrapper>
+        <SC.Placeholder></SC.Placeholder>
+        <SecondarySlider photos={photos} />
       </SC.Wrapper>
     </Modal>
   );

@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: relative;
+
+  height: 100%;
 `;
 
-export const SliderWrapper = styled.div`
-  position: absolute;
-  top: 60px;
-  left: 0;
+export const Placeholder = styled.div`
+  height: 50px;
+  width: 90%;
 `;

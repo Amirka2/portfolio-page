@@ -1,30 +1,30 @@
 import React from "react";
 
 import main from "@static/images/main_background.png";
-import scenery from "@static/images/scenery.jpeg";
-import stillLife from "@static/images/stil_life.jpeg";
-import art from "@static/images/artwork.png";
-import study from "@static/images/studywork.jpeg";
-import graphics from "@static/images/graphics.jpeg";
+
 import { MainSlider } from "@entities/MainSlider";
 import { BioMain } from "@entities/Bio";
 import { Jobs } from "@entities/Jobs";
 
+import { useMainSliderPhotos } from "../api";
 import * as SC from "./Home.styles";
 
-const photos = [
-  main,
-  scenery,
-  stillLife,
-  art,
-  study,
-  graphics
-];
-
 export const Home = () => {
+  const { data, isPending, isError } = useMainSliderPhotos();
+
+  if (isPending) {
+    return <>loading</>
+  }
+
+  if (isError) {
+    return <>error</>
+  }
+
+  data.unshift(main);
+
   return (
     <SC.Wrapper>
-      <MainSlider photos={photos} />
+      <MainSlider photos={data} />
       <BioMain />
       <Jobs />
     </SC.Wrapper>

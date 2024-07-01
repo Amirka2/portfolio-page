@@ -63,6 +63,7 @@ export const CloseButton = styled.button`
   color: ${Color.White};
 
   transform: scale(1.5);
+  z-index: 10000;
 
   &:hover {
     color: ${Color.Black};

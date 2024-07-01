@@ -4,7 +4,7 @@ import SlickSlider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import * as SC from './Slider.styles';
+import * as SC from "./Slider.styles";
 
 const BASE_SETTINGS: Settings = {
   dots: true,
@@ -18,13 +18,9 @@ const BASE_SETTINGS: Settings = {
 interface SliderProps extends PropsWithChildren {}
 
 export const BaseSlider = ({ children }: SliderProps) => {
-  return (
-    <SlickSlider {...BASE_SETTINGS}>
-        {children}
-    </SlickSlider>
-  )
+  return <SlickSlider {...BASE_SETTINGS}>{children}</SlickSlider>;
 };
 
 export const Slider = Object.assign(BaseSlider, {
-    ImageWrapper: SC.PhotoContainer
-})
+  ImageWrapper: SC.PhotoContainer,
+});

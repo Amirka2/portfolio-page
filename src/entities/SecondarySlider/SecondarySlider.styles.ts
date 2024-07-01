@@ -6,21 +6,18 @@ export const Wrapper = styled.div`
     
     background-size: cover;
 
-    & .slick-slider {
-        position: relative;
-    }
-
     & .slick-slider img {
         height: 90vh;
     }
 
     & .slick-slider > .slick-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        position: fixed;
+        top: 50vh;
 
         width: 80px;
         height: 80px;
+    
+        transform: translateY(-50%);
 
         z-index: 1000;
     }
@@ -34,6 +31,6 @@ export const Wrapper = styled.div`
     }
 
     & .slick-slider > .slick-dots {
-        bottom: 10px;
+        bottom: 20px;
     }
 `;

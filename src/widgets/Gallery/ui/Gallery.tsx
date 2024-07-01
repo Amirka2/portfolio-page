@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { PhotoWatcher } from "@entities/PhotoWatch";
 import { usePhotoColumns } from "@shared/hooks";
+import { getPhotoPath } from "@shared/libs";
 
 import * as SC from "./Gallery.styles";
 
@@ -42,7 +43,7 @@ export const Gallery = ({
               <SC.Image
                 onClick={() => handleClick(photo)}
                 alt="img1"
-                src={photo}
+                src={getPhotoPath(photo)}
                 title="Название длинное и сложное. Very very long description"
               />
             ))}

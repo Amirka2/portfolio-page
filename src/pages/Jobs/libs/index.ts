@@ -1,4 +1,4 @@
-import { mapWorksToPhotos, Work } from "@entities/Work";
+import { Work } from "@entities/Work";
 import { AxiosResponse } from "axios";
 
 export const generateArray = (array: any[], capacity: number) => {
@@ -17,5 +17,4 @@ export const generateArray = (array: any[], capacity: number) => {
   return res;
 };
 
-export const selectPhotos = ({ data }: AxiosResponse<Work[]>) =>
-  mapWorksToPhotos(data);
+export const selectPhotos = ({ data }: AxiosResponse<Work[]>) => data;

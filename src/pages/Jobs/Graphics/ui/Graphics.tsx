@@ -30,7 +30,7 @@ export const Graphics = () => {
 
   return (
     <GS.Wrapper>
-      <Gallery photos={data} category={CATEGORY_KEY} />
+      <Gallery works={data} category={CATEGORY_KEY} />
     </GS.Wrapper>
   );
 };

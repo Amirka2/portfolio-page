@@ -5,7 +5,7 @@ import * as SC from "./Event.styles";
 interface PublicationProps {
   photo: string;
   text: string;
-  year: string;
+  year?: string;
 }
 
 export const Event = ({ photo, text, year }: PublicationProps) => {

@@ -1,6 +1,7 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
-import { Color } from "@shared";
+import { Color, Paths } from "@shared";
 import { ArrowIcon, Container } from "@shared/ui";
 import { useTranslation } from "@shared/hooks";
 import { LanguageSwitcher } from "@features/LanguageSwitcher";
@@ -11,6 +12,7 @@ import * as SC from "./Footer.styles";
 
 export const Footer = () => {
   const { t } = useTranslation();
+  const location = useLocation();
 
   const handleGoTopClick = () => {
     window.scroll(0, 0);
@@ -32,7 +34,10 @@ export const Footer = () => {
             <SC.Caption>
               © {t("Footer.name")} — {new Date().getFullYear()}
             </SC.Caption>
-            <LanguageSwitcher color={Color.White} />
+            <LanguageSwitcher
+              color={Color.White}
+              hasChinese={location.pathname === Paths.About}
+            />
           </SC.SubInfo>
           <SC.GoTop onClick={handleGoTopClick}>
             <ArrowIcon />

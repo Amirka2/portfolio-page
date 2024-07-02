@@ -63,7 +63,7 @@ export const Caption = styled.span`
 
 export const GoTop = styled.button`
   position: absolute;
-  top: 50%;
+  top: 75%;
   right: 0;
 
   width: 50px;
@@ -74,4 +74,8 @@ export const GoTop = styled.button`
   border: none;
 
   transform: translateY(-50%);
+
+  ${mediaQueries.gt.Desktop} {
+    top: 50%;
+  }
 `;

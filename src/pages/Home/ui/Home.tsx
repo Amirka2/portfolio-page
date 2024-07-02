@@ -20,6 +20,9 @@ export const Home = () => {
     return <>error</>
   }
 
+  // TODO добавить фото на бэк, чтобы не менять структуру MainSlider
+  // чтобы все пути брались с помощью хелпера 
+  // 413 status
   data.unshift(main);
 
   return (

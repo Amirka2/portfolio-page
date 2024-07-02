@@ -12,24 +12,24 @@ interface GalleryProps {
   category: string;
   minWidth?: number;
   maxWidth?: number;
-  photos?: Array<Work>;
+  works?: Work[];
 }
 
 export const Gallery = ({
   category,
-  photos,
+  works,
   minWidth = 375,
-  maxWidth = 500,
+  maxWidth = 450,
 }: GalleryProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState<Work | null>(null);
+  const [active, setActive] = useState<number | null>(null);
   const [sortedPhotos] = usePhotoColumns({
-    photos,
+    photos: works,
     minWidth,
   });
   const { t } = useTranslation();
 
-  const handleClick = (photo: Work) => {
+  const handleClick = (photo: number) => {
     setActive(photo);
     setIsOpen(true);
   };
@@ -46,7 +46,10 @@ export const Gallery = ({
           <SC.PhotosColumn maxWidth={maxWidth}>
             {column.map((work) => (
               <SC.Image
-                onClick={() => handleClick(work)}
+                onClick={() => {
+                  const workIndex = works.findIndex((w) => w.id === work.id);
+                  handleClick(workIndex);
+                }}
                 alt={t(`${category}.${work.id}`)}
                 src={getPhotoPath(work.name)}
                 title={t(`${category}.${work.id}`)}
@@ -56,10 +59,11 @@ export const Gallery = ({
         ))}
       </SC.PhotosWrapper>
       <PhotoWatcher
+        category={category}
         isOpen={isOpen}
         onClose={handleClose}
-        photos={photos}
-        activePhoto={active}
+        works={works}
+        activeWork={active}
       />
     </>
   );

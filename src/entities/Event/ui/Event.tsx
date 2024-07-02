@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as SC from "./Event.styles";
+import { Text } from "@shared/ui";
 
 interface PublicationProps {
   photo: string;
@@ -13,10 +14,10 @@ export const Event = ({ photo, text, year }: PublicationProps) => {
     <SC.Wrapper>
       <SC.Image src={photo} />
       <SC.Info>
-        <SC.Text>{text}</SC.Text>
-        <SC.Text>
+        <Text>{text}</Text>
+        <Text>
           <b>{year}</b>
-        </SC.Text>
+        </Text>
       </SC.Info>
     </SC.Wrapper>
   );

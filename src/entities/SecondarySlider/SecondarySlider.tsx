@@ -1,21 +1,29 @@
 import React from "react";
 
+import { useTranslation } from "@shared/hooks";
 import { getPhotoPath } from "@shared/libs";
 import { Slider } from "@shared/ui";
+import type { Work } from "@entities/Work";
 
 import * as SC from "./SecondarySlider.styles";
 
 interface PhotoSliderProps {
-  photos: Array<string>;
+  category: string;
+  works: Work[];
+  activeSlide: number;
 }
 
-export const SecondarySlider = ({ photos }: PhotoSliderProps) => {
+export const SecondarySlider = ({ category, works, activeSlide }: PhotoSliderProps) => {
+  const { t } = useTranslation();
+
+  console.log(activeSlide)
   return (
     <SC.Wrapper>
-      <Slider >
-        {photos.map((url) => (
-          <Slider.ImageWrapper photo={getPhotoPath(url)} key={url}>
-            <img src={getPhotoPath(url)} alt="photo" />
+      <Slider dots={false} activeSlide={activeSlide}>
+        {works.map((work) => (
+          <Slider.ImageWrapper key={work.name}>
+            <img src={getPhotoPath(work.name)} alt="photo" />
+            <SC.Description>{t(`${category}.${work?.id}`)}</SC.Description>
           </Slider.ImageWrapper>
         ))}
       </Slider>

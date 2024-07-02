@@ -1,9 +1,8 @@
 import React from "react";
 
-import { useTranslation } from "@shared/hooks";
-import { Modal } from "@shared/ui";
 import { SecondarySlider } from "@entities/SecondarySlider";
-import { mapWorksToPhotos, type Work } from "@entities/Work";
+import { type Work } from "@entities/Work";
+import { Modal } from "@shared/ui";
 
 import * as SC from "./PhotoWatcher.styles";
 

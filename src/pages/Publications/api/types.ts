@@ -1,13 +1,13 @@
 import type { LanguageType, PhotoRatioType } from "@shared/types";
 
-export interface WorkDescription {
+export interface PublicationDescription {
   language: LanguageType;
   description: string;
 }
 
-export interface WorkModel {
+export interface PublicationResponse {
   id: number;
   name: string;
   position: PhotoRatioType;
-  descriptions: WorkDescription[];
+  descriptions: PublicationDescription[];
 }

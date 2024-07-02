@@ -1,32 +1,10 @@
-import i18next from "i18next";
-
-import type { LanguageType, Work } from "@entities/Work";
-
-interface LooseObject {
-  [key: string]: string;
-}
-
-interface Resources {
-    ru: LooseObject;
-    en: LooseObject;
-}
-
-export const setResources = (data: Resources, category: string) => {
-  const resources = {
-    ru: {
-      [category]: data.ru,
-    },
-    en: {
-      [category]: data.en,
-    },
-  };
-
-  i18next.addResourceBundle('ru', 'translation', resources.ru, true, true);
-  i18next.addResourceBundle('en', 'translation', resources.en, true, true);
-};
+import type { LanguageType, LooseObject } from "@shared/types";
+import type { Work } from "@entities/Work";
 
 const prepareWorkByLanguage = (works: Work[], language: LanguageType) => {
-  const res: LooseObject = {};
+  type NewType = LooseObject;
+
+  const res: NewType = {};
 
   works.forEach((work) => {
     res[`${work.id}`] = work.descriptions.find(

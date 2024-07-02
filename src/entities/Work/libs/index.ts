@@ -1,3 +1,3 @@
-import { Work } from "../model";
+import { WorkModel } from "../model";
 
-export const mapWorksToPhotos = (works: Work[]) => works.map(work => work.name);
+export const mapWorksToPhotos = (works: WorkModel[]) => works.map(work => work.name);

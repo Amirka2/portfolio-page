@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
-import { prepareWorksDescriptions, setResources } from "@entities/Jobs";
+import { setResources } from "@shared/libs";
+import { prepareWorksDescriptions } from "@entities/Jobs";
 import { Gallery } from "@widgets/Gallery";
 
 import * as GS from "../../ui";

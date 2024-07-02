@@ -5,7 +5,7 @@ import * as SC from "./Publication.styles";
 interface PublicationProps {
   photo: string;
   text: string;
-  year: string;
+  year?: string;
 }
 
 export const Publication = ({ photo, text, year }: PublicationProps) => {

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Text } from "@shared/ui";
+
 import * as SC from "./Publication.styles";
 
 interface PublicationProps {
@@ -13,10 +15,10 @@ export const Publication = ({ photo, text, year }: PublicationProps) => {
     <SC.Wrapper>
       <SC.Image src={photo} />
       <SC.Info>
-        <SC.Text>{text}</SC.Text>
-        <SC.Text>
+        <Text>{text}</Text>
+        <Text>
           <b>{year}</b>
-        </SC.Text>
+        </Text>
       </SC.Info>
     </SC.Wrapper>
   );

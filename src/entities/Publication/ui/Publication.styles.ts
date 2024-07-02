@@ -1,13 +1,25 @@
 import styled from "styled-components";
 
+import { mediaQueries } from "@shared";
+
 export const Wrapper = styled.div`
   display: flex;
-  gap: 32px;
+  flex-direction: column;
+  gap: 16px;
+
+  ${mediaQueries.gt.Desktop} {
+    flex-direction: row;
+    gap: 32px;
+  }
 `;
 
 export const Image = styled.img`
-  width: 412px;
-  height: 530px;
+  width: 100%;
+
+  ${mediaQueries.gt.Desktop} {
+    width: 412px;
+    max-height: 530px;
+  }
 
   background-size: cover;
 `;
@@ -18,7 +30,3 @@ export const Info = styled.div`
   flex-shrink: 5;
 `;
 
-export const Text = styled.p`
-  font-size: 24px;
-  line-height: 28px;
-`;

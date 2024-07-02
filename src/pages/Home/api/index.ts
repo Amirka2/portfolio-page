@@ -6,8 +6,9 @@ import { API_PATH } from "@shared";
 
 const getRandomPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork`);
 
+// TODO сменить ендпоинт, добавить главную фотку на бэк
 const selectPhotos = ({ data }: AxiosResponse<Work[]>) =>
-    mapWorksToPhotos(data);
+    mapWorksToPhotos(data).slice(0, 5);
 
 export const useMainSliderPhotos = () => useQuery({
     queryKey: ['photos', 'random'],

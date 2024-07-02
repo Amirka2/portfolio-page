@@ -1,1 +1,1 @@
-export { Scenery as SceneryJobs } from './Scenery';
+export * from './ui';

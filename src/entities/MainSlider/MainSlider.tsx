@@ -1,5 +1,6 @@
 import React from "react";
 
+import { getPhotoPath } from "@shared/libs";
 import { Slider } from "@shared/ui";
 
 import * as SC from "./MainSlider.styles";
@@ -12,9 +13,9 @@ export const MainSlider = ({ photos }: PhotoSliderProps) => {
   return (
     <SC.Wrapper>
       <Slider>
-        {photos.map((url) => (
-          <Slider.ImageWrapper photo={url} key={url}>
-            <img src={url} alt={"photo"} />
+        {photos.map((photo) => (
+          <Slider.ImageWrapper photo={getPhotoPath(photo)} key={photo}>
+            <img src={getPhotoPath(photo)} alt={"photo"} />
           </Slider.ImageWrapper>
         ))}
       </Slider>

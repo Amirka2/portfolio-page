@@ -1,21 +1,17 @@
 import { useEffect, useState } from "react";
 
-import { sortPhotos } from "@shared/libs";
+import { useWindowSize } from "@shared/hooks";
+import { sortPhotos } from "@entities/Jobs";
+import type { Work } from "@entities/Work";
 
-import { useWindowSize } from "./useWindowSize";
+type UsePhotoColumns = (data: { photos: Work[]; minWidth: number }) => Work[][][];
 
-export const usePhotoColumns = ({
-  photos,
-  minWidth,
-}: {
-  photos: string[];
-  minWidth: number;
-}) => {
+export const usePhotoColumns: UsePhotoColumns = ({ photos, minWidth }) => {
   const [width] = useWindowSize();
   const [sortedPhotos, setSortedPhotos] = useState(null);
-  
+
   const columnsInit = Math.floor(width / minWidth);
-  let sortedPhotosInit: Array<string[]> = [];
+  let sortedPhotosInit: Work[][] = [];
 
   if (columnsInit !== 0) {
     sortedPhotosInit = sortPhotos(photos, columnsInit);
@@ -23,16 +19,14 @@ export const usePhotoColumns = ({
 
   useEffect(() => {
     const columnsInit = Math.floor(width / minWidth);
-    let sortedPhotosInit: Array<string[]> = [];
-  
+    let sortedPhotosInit: Work[][] = [];
+
     if (columnsInit !== 0) {
       sortedPhotosInit = sortPhotos(photos, columnsInit);
     }
-  
+
     setSortedPhotos(sortedPhotosInit);
   }, [width, minWidth, photos]);
-  
-  return [
-    sortedPhotos
-  ];
+
+  return [sortedPhotos];
 };

@@ -10,4 +10,12 @@ cp .env.example .env
 npm run start
 ``
 
-Используется методология feature-sliced-design, typescript, webpack 
+Используется методология feature-sliced-design
+Технологоии, библиотеки: 
+- typescript
+- webpack
+- i18n
+- axios
+- tanstackQuery
+- react-slick
+

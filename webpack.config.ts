@@ -9,6 +9,8 @@ type Mode = 'development' | 'production';
 interface EnvVariables {
   mode: Mode;
   port: number;
+  API_PATH: string;
+  ASSET_PATH: string;
 }
 
 console.log(__dirname)
@@ -25,7 +27,7 @@ export default (env: EnvVariables) => {
       filename: '[name].[contenthash].js',
       // to delete old builds
       clean: true,
-      publicPath: '/'
+      publicPath: env.ASSET_PATH ?? '/'
     },
     plugins: [
       // plugin for creating build html using own html
@@ -35,7 +37,7 @@ export default (env: EnvVariables) => {
       new Dotenv({
         path: '.env',
         safe: true
-      })
+      }),
     ].filter(Boolean),
     module: {
       rules: [
@@ -73,6 +75,13 @@ export default (env: EnvVariables) => {
       historyApiFallback: true,
       port: env.port ?? 3000,
       open: true,
+      proxy: [
+        {
+          context: ['/photo'],
+          target: env.ASSET_PATH,
+          pathRewrite: { '^/photo': '' },
+        },
+      ],
     } : undefined,
   }
 

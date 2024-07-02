@@ -6,8 +6,11 @@ export const PhotoContainer = styled.div<{
   position: relative;
   // нужно для центрирования фото в слайде
   display: flex !important;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-  background: url(${({ photo }) => photo});
+  height: 100vh;
+
+  background: url(${({ photo }) => Boolean(photo) && photo});
   backdrop-filter: blur(10px);
 `;

@@ -1,29 +1,35 @@
 import React, { useState } from "react";
 
+import { getPhotoPath } from "@shared/libs";
+import { useTranslation } from "@shared/hooks";
 import { PhotoWatcher } from "@entities/PhotoWatch";
-import { usePhotoColumns } from "@shared/hooks";
+import type { Work } from "@entities/Work";
 
+import { usePhotoColumns } from "../hooks";
 import * as SC from "./Gallery.styles";
 
 interface GalleryProps {
+  category: string;
   minWidth?: number;
   maxWidth?: number;
-  photos?: Array<string>;
+  works?: Work[];
 }
 
 export const Gallery = ({
-  photos,
+  category,
+  works,
   minWidth = 375,
-  maxWidth = 500,
+  maxWidth = 450,
 }: GalleryProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState<string | null>(null);
+  const [active, setActive] = useState<number | null>(null);
   const [sortedPhotos] = usePhotoColumns({
-    photos,
+    photos: works,
     minWidth,
   });
+  const { t } = useTranslation();
 
-  const handleClick = (photo: any) => {
+  const handleClick = (photo: number) => {
     setActive(photo);
     setIsOpen(true);
   };
@@ -36,24 +42,28 @@ export const Gallery = ({
   return (
     <>
       <SC.PhotosWrapper>
-        {sortedPhotos?.map((column: any) => (
+        {sortedPhotos?.map((column) => (
           <SC.PhotosColumn maxWidth={maxWidth}>
-            {column.map((photo: string) => (
+            {column.map((work) => (
               <SC.Image
-                onClick={() => handleClick(photo)}
-                alt="img1"
-                src={photo}
-                title="Название длинное и сложное. Very very long description"
+                onClick={() => {
+                  const workIndex = works.findIndex((w) => w.id === work.id);
+                  handleClick(workIndex);
+                }}
+                alt={t(`${category}.${work.id}`)}
+                src={getPhotoPath(work.name)}
+                title={t(`${category}.${work.id}`)}
               />
             ))}
           </SC.PhotosColumn>
         ))}
       </SC.PhotosWrapper>
       <PhotoWatcher
+        category={category}
         isOpen={isOpen}
         onClose={handleClose}
-        photos={photos}
-        activePhoto={active}
+        works={works}
+        activeWork={active}
       />
     </>
   );

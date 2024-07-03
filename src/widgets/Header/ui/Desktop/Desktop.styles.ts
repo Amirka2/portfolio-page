@@ -43,7 +43,7 @@ export const Placeholder = styled.div`
 export const MainText = styled.h1`
     padding: 26px;
     
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 48px;
     line-height: 56px;
     font-weight: 400;

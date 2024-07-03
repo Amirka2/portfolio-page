@@ -15,7 +15,7 @@ export const Link = styled(ReactLink)`
     text-decoration: none;
     
     color: ${Color.Black};
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 28px;

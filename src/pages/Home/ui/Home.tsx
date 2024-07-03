@@ -1,7 +1,5 @@
 import React from "react";
 
-import main from "@static/images/main_background.png";
-
 import { MainSlider } from "@entities/MainSlider";
 import { BioMain } from "@entities/Bio";
 import { Jobs } from "@entities/Jobs";
@@ -19,11 +17,6 @@ export const Home = () => {
   if (isError) {
     return <>error</>
   }
-
-  // TODO добавить фото на бэк, чтобы не менять структуру MainSlider
-  // чтобы все пути брались с помощью хелпера 
-  // 413 status
-  data.unshift(main);
 
   return (
     <SC.Wrapper>

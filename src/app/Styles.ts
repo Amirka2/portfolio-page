@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
     /* http://meyerweb.com/eric/tools/css/reset/
@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         border: 0;
         font-size: 100%;
-        font-family: Inter, sans-serif;
+        font-family: 'Inter', sans-serif;
         vertical-align: baseline;
         scroll-behavior: smooth;
     }

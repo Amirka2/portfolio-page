@@ -5,6 +5,7 @@ import "./styles.css";
 import * as SC from "./Burger.styles";
 import { BurgerIcon, CrossIcon } from "../Icons";
 import { LanguageSwitcher } from "@features/LanguageSwitcher";
+import { createPortal } from "react-dom";
 
 interface BurgerProps {
   children: ReactNode;
@@ -30,15 +31,18 @@ const BurgerMenu = ({ children }: BurgerProps) => {
       <SC.Button onClick={handleClick}>
         <BurgerIcon />
       </SC.Button>
-      <SC.Wrapper isOpen={isOpen}>
-        <SC.CrossButton onClick={handleClick}>
-          <CrossIcon />
-        </SC.CrossButton>
-        <SC.Links>{children}</SC.Links>
-        <SC.SwitcherWrapper>
-          <LanguageSwitcher />
-        </SC.SwitcherWrapper>
-      </SC.Wrapper>
+      {createPortal(
+        <SC.Wrapper isOpen={isOpen}>
+          <SC.CrossButton onClick={handleClick}>
+            <CrossIcon />
+          </SC.CrossButton>
+          <SC.Links onClick={handleClick}>{children}</SC.Links>
+          <SC.SwitcherWrapper>
+            <LanguageSwitcher />
+          </SC.SwitcherWrapper>
+        </SC.Wrapper>,
+        document.body
+      )}
     </>
   );
 };

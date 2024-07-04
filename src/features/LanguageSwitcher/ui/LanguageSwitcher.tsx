@@ -34,14 +34,14 @@ export const LanguageSwitcher = ({
         isActive={isActive("en")}
         color={color}
       >
-        EN
+        En
       </SC.Button>
       <SC.Button
         onClick={() => handleChange("ru")}
         isActive={isActive("ru")}
         color={color}
       >
-        RU
+        Ru
       </SC.Button>
       {hasChinese && (
         <SC.Button
@@ -49,7 +49,7 @@ export const LanguageSwitcher = ({
           isActive={isActive("cn")}
           color={color}
         >
-          CN
+          Cn
         </SC.Button>
       )}
     </SC.Wrapper>

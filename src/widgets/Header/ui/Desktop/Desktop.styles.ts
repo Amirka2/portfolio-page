@@ -44,9 +44,9 @@ export const MainText = styled.h1`
     padding: 26px;
     
     font-family: 'Roboto', sans-serif;
-    font-size: 48px;
-    line-height: 56px;
-    font-weight: 400;
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 300;
     
     text-transform: uppercase;
 `;

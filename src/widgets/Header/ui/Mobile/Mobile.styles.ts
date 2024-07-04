@@ -31,7 +31,7 @@ export const MainText = styled.h1`
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   line-height: 28px;
-  font-weight: 400;
+  font-weight: 300;
 
   text-transform: uppercase;
 `;

@@ -12,6 +12,13 @@ export const Button = styled.button`
   background: transparent;
 `;
 
+export const CrossButton = styled(Button)`
+  position: absolute;
+
+  top: 38px;
+  right: 16px;
+`;
+
 export const Wrapper = styled.div<{
   isOpen?: boolean;
 }>`
@@ -23,7 +30,7 @@ export const Wrapper = styled.div<{
   width: 90%;
   max-width: 400px;
   height: 100%;
-  margin-top: 104px;
+  padding-top: 104px;
 
   background: ${Color.White};
   transform: translateX(100%);
@@ -53,4 +60,11 @@ export const Link = styled(ReactLink)`
   font-size: 20px;
   line-height: 24px;
   color: ${Color.Black};
+`;
+
+export const SwitcherWrapper = styled.div`
+  position: absolute;
+
+  bottom: calc(28px + 104px);
+  right: 16px;
 `;

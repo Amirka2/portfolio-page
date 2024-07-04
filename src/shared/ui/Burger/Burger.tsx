@@ -3,7 +3,8 @@ import React, { ReactNode, useEffect, useState } from "react";
 // importing css class for disabling scroll
 import "./styles.css";
 import * as SC from "./Burger.styles";
-import { BurgerIcon } from "../Icons";
+import { BurgerIcon, CrossIcon } from "../Icons";
+import { LanguageSwitcher } from "@features/LanguageSwitcher";
 
 interface BurgerProps {
   children: ReactNode;
@@ -30,7 +31,13 @@ const BurgerMenu = ({ children }: BurgerProps) => {
         <BurgerIcon />
       </SC.Button>
       <SC.Wrapper isOpen={isOpen}>
+        <SC.CrossButton onClick={handleClick}>
+          <CrossIcon />
+        </SC.CrossButton>
         <SC.Links>{children}</SC.Links>
+        <SC.SwitcherWrapper>
+          <LanguageSwitcher />
+        </SC.SwitcherWrapper>
       </SC.Wrapper>
     </>
   );

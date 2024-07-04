@@ -17,10 +17,14 @@ const ItemStyles = `
   text-align: center;
 
   &:hover {
-    background: ${rgba(Color.Black, 0.1)};
+    text-decoration: underline;
   }`;
 
 export const Trigger = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
   background: transparent;
   border: none;
 
@@ -32,8 +36,8 @@ export const Menu = styled.div`
 
   display: flex;
   flex-direction: column;
-  
-  background: ${rgba(Color.White, .7)};
+
+  background: ${rgba(Color.White, 0.7)};
 `;
 
 export const LinkElement = styled(Link)`

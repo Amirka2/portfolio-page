@@ -2,9 +2,10 @@ import React, { useRef } from "react";
 
 import { Paths } from "@shared";
 import { useTranslation } from "@shared/hooks";
-import { Dropdown } from "@shared/ui";
+import { Dropdown, MiniArrowIcon } from "@shared/ui";
 
 import * as SC from "./DropdownMenu.styles";
+import { MiniArrow } from "@shared/ui/Icons/MiniArrow";
 
 export const DropdownMenu = () => {
   const { t } = useTranslation();
@@ -24,6 +25,7 @@ export const DropdownMenu = () => {
             ref={triggerRef}
           >
             {t("Header.jobs")}
+            <MiniArrowIcon direction="bottom"/>
           </SC.Trigger>
         )}
       </Dropdown.Trigger>

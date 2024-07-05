@@ -13,16 +13,24 @@ interface PhotoSliderProps {
   activeSlide: number;
 }
 
-export const SecondarySlider = ({ category, works, activeSlide }: PhotoSliderProps) => {
+export const SecondarySlider = ({
+  category,
+  works,
+  activeSlide,
+}: PhotoSliderProps) => {
   const { t } = useTranslation();
 
-  console.log(activeSlide)
+  console.log(activeSlide);
   return (
     <SC.Wrapper>
       <Slider dots={false} activeSlide={activeSlide}>
         {works.map((work) => (
           <Slider.ImageWrapper key={work.name}>
-            <img src={getPhotoPath(work.name)} alt="photo" />
+            <SC.Image
+              src={getPhotoPath(work.name)}
+              alt={t(`${category}.${work?.id}`)}
+              isLimitedHeight={work.position === 'VERTICAL'}
+            />
             <SC.Description>{t(`${category}.${work?.id}`)}</SC.Description>
           </Slider.ImageWrapper>
         ))}

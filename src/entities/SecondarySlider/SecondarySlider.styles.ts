@@ -1,4 +1,4 @@
-import { Color } from "@shared";
+import { Color, mediaQueries } from "@shared";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -6,11 +6,6 @@ export const Wrapper = styled.div`
   width: 100%;
 
   background-size: cover;
-
-  & .slick-slider img {
-    height: calc(100vh - 100px);
-    width: fit-content;
-  }
 
   & .slick-slider > .slick-arrow {
     position: fixed;
@@ -43,10 +38,28 @@ export const Description = styled.div`
 
   min-height: 40px;
   width: 100%;
-  
+
   padding-top: 12px;
   background: ${Color.Gray};
 
   text-align: center;
   color: ${Color.White};
+`;
+
+export const Image = styled.img<{
+  isLimitedHeight?: boolean;
+}>`
+  width: 100vw;
+
+  ${mediaQueries.gt.Desktop} {
+    width: auto;
+    height: 100%;
+    max-height: calc(100vh - 100px);
+  }
+
+  ${({ isLimitedHeight }) =>
+    isLimitedHeight &&
+    `
+    width: 75vw;
+  `}
 `;

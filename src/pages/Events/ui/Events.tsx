@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useTranslation } from "@shared/hooks";
 import { getPhotoPath, setResources } from "@shared/libs";
@@ -9,14 +9,18 @@ import { useEvents } from "../api";
 
 import * as SC from "./Events.styles";
 
+const EVENTS_KEY = "Events";
+
 export const Events = () => {
   const { data, isError, isPending } = useEvents();
   const { t } = useTranslation();
+  const [resourcesReady, setResourcesReady] = useState(false);
 
   useEffect(() => {
     if (data) {
       const preparedResources = prepareEventsDescriptions(data);
-      setResources(preparedResources, "Publications");
+      setResources(preparedResources, EVENTS_KEY);
+      setResourcesReady(true);
     }
   }, [data]);
 
@@ -34,7 +38,7 @@ export const Events = () => {
         {data.map((event) => (
           <Event
             photo={getPhotoPath(event.name)}
-            text={t(`Publications.${event?.id}`)}
+            text={t(`${EVENTS_KEY}.${event?.id}`)}
           />
         ))}
       </SC.Wrapper>

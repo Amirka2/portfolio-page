@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useTranslation } from "@shared/hooks";
 import { getPhotoPath, setResources } from "@shared/libs";
@@ -11,14 +11,18 @@ import {
 import { usePublications } from "../api";
 import * as SC from "./Publications.styles";
 
+const PUBLICATIONS_KEY = "Publications";
+
 export const Publications = () => {
   const { data, isError, isPending } = usePublications();
   const { t } = useTranslation();
+  const [resourcesReady, setResourcesReady] = useState(false);
 
   useEffect(() => {
     if (data) {
       const preparedResources = preparePublicationsDescriptions(data);
-      setResources(preparedResources, "Publications");
+      setResources(preparedResources, PUBLICATIONS_KEY);
+      setResourcesReady(true);
     }
   }, [data]);
 
@@ -37,7 +41,7 @@ export const Publications = () => {
           return (
             <Publication
               photo={getPhotoPath(publication.name)}
-              text={t(`Publications.${publication?.id}`)}
+              text={t(`${PUBLICATIONS_KEY}.${publication?.id}`)}
             />
           );
         })}

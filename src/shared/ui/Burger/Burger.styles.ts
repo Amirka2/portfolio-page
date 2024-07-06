@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { Color } from "@shared/constants";
 
 export const Button = styled.button`
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
 
   padding: 8px;
   border: none;

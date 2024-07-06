@@ -14,7 +14,7 @@ export const Header = styled.header`
 
   background: ${Color.White};
 
-  z-index: 1000;
+  z-index: 10000;
 `;
 
 export const Wrapper = styled.div`
@@ -24,13 +24,13 @@ export const Wrapper = styled.div`
   gap: 16px;
 
   width: fit-content;
-  padding: 32px 16px;
+  padding: 12px 16px;
 `;
 
 export const MainText = styled.h1`
   font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 24px;
   font-weight: 300;
 
   text-transform: uppercase;

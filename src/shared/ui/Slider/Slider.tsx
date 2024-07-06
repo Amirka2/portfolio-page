@@ -13,7 +13,6 @@ const BASE_SETTINGS: Settings = {
   slidesToScroll: 1,
   fade: true,
   infinite: true,
-  swipeToSlide: true,
 };
 
 interface SliderProps extends Settings {

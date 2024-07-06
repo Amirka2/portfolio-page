@@ -19,6 +19,8 @@ export const Wrapper = styled.section`
   }
 
   & .slick-slider > .slick-arrow {
+    display: none;
+
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

@@ -5,12 +5,13 @@ import { getPhotoPath } from "@shared/libs";
 import { Slider } from "@shared/ui";
 
 import * as SC from "./MainSlider.styles";
+import { Work } from "@entities/Work";
 
 interface PhotoSliderProps {
-  photos: Array<string>;
+  works: Work[];
 }
 
-export const MainSlider = ({ photos }: PhotoSliderProps) => {
+export const MainSlider = ({ works }: PhotoSliderProps) => {
   const { t } = useTranslation();
 
   return (
@@ -21,10 +22,14 @@ export const MainSlider = ({ photos }: PhotoSliderProps) => {
           <SC.MainText>{t("Main.shortName")}</SC.MainText>
           <SC.SecondaryText>{t("Main.profession")}</SC.SecondaryText>
         </SC.MainSlide>
-        {photos.map((photo) => (
-          <Slider.ImageWrapper photo={getPhotoPath(photo)} key={photo}>
-            <img src={getPhotoPath(photo)} alt={"photo"} />
-          </Slider.ImageWrapper>
+        {works.map((work) => (
+          <SC.ImageWrapper photo={getPhotoPath(work.name)} key={work.name}>
+            <SC.Image
+              src={getPhotoPath(work.name)}
+              alt={work.name}
+              photoType={work.position}
+            />
+          </SC.ImageWrapper>
         ))}
       </Slider>
     </SC.Wrapper>

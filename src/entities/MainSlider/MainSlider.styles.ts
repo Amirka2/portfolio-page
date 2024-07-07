@@ -2,20 +2,23 @@ import styled from "styled-components";
 
 import main from "@static/images/main_background.png";
 import logo from "@static/images/main_logo.png";
+
 import { mediaQueries } from "@shared";
+import { PhotoRatioType } from "@shared/types";
+import { Slider } from "@shared/ui";
 
 export const Wrapper = styled.section`
-  height: 100vh;
+  height: calc(100vh - 60px);
   width: 100%;
 
   background-size: cover;
 
-  & .slick-slider {
-    position: relative;
+  ${mediaQueries.gt.Desktop} {
+    /* height: 100vh; */
   }
 
-  & .slick-slider img {
-    height: 100vh;
+  & .slick-slider {
+    position: relative;
   }
 
   & .slick-slider > .slick-arrow {
@@ -44,6 +47,30 @@ export const Wrapper = styled.section`
   }
 `;
 
+export const ImageWrapper = styled(Slider.ImageWrapper)`
+  ${mediaQueries.gt.Desktop} {
+    height: 100vh;
+  }
+`;
+
+export const Image = styled.img<{
+  photoType?: PhotoRatioType;
+}>`
+  width: 100vw;
+
+  ${mediaQueries.gt.Desktop} {
+    width: auto;
+    height: 100%;
+    max-height: calc(100vh);
+  }
+
+  ${({ photoType }) =>
+    photoType === 'VERTICAL' &&
+    `
+    width: 75vw;
+  `}
+`;
+
 export const MainSlide = styled.div<{
   photo?: string;
 }>`
@@ -54,10 +81,16 @@ export const MainSlide = styled.div<{
   align-items: center;
   justify-content: center;
 
-  height: 100vh;
-
+  height: calc(100vh - 60px);
+  
   background: url(${main});
   backdrop-filter: blur(10px);
+  background-size: cover;
+
+  ${mediaQueries.gt.Desktop} {
+    height: 100vh;
+  }
+
 `;
 
 export const MainText = styled.h1`

@@ -20,7 +20,6 @@ export const SecondarySlider = ({
 }: PhotoSliderProps) => {
   const { t } = useTranslation();
 
-  console.log(activeSlide);
   return (
     <SC.Wrapper>
       <Slider dots={false} activeSlide={activeSlide}>

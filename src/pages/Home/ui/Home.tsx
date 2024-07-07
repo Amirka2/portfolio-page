@@ -20,7 +20,7 @@ export const Home = () => {
 
   return (
     <SC.Wrapper>
-      <MainSlider photos={data} />
+      <MainSlider works={data} />
       <BioMain />
       <Jobs />
     </SC.Wrapper>

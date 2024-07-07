@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Color } from "@shared";
 
 const ItemStyles = `
-  padding: 28px 52px;
+  padding: 22px 52px;
 
   text-decoration: none;
 
@@ -43,5 +43,5 @@ export const Menu = styled.div`
 export const LinkElement = styled(Link)`
   ${ItemStyles};
 
-  padding: 28px 8px;
+  padding: 22px 8px;
 `;

@@ -45,7 +45,7 @@ export const MainText = styled.h1`
     
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
-    line-height: 46px;
+    line-height: 40px;
     font-weight: 300;
     
     text-transform: uppercase;

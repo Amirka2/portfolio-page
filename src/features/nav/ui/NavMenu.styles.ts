@@ -9,7 +9,7 @@ export const Container = styled.nav`
 `;
 
 export const Link = styled(ReactLink)`
-  padding: 28px 52px;
+  padding: 22px 52px;
 
   text-decoration: none;
 

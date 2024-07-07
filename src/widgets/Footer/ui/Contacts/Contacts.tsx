@@ -14,26 +14,21 @@ export const Contacts = () => {
       <SC.Content>
         <SC.TextLinks>
           <SC.ContactLink
-            href="tel:+7(921)39-79-888
-"
+            href="tel:+7(921)39-79-888"
           >
             +7(921)39-79-888
           </SC.ContactLink>
           <SC.ContactLink
-            href="mailto:katerinadorohova@mail.ru
-"
+            href="mailto:katerinadorohova@mail.ru"
           >
             katerinadorohova@mail.ru
           </SC.ContactLink>
         </SC.TextLinks>
         <SC.SocialLinks>
-          <SC.ContactButton
-            href="https://t.me/+7(921)39-79-888
-"
-          >
+          <SC.ContactButton href="https://t.me/+79213979888" target="_blank" rel="noopener noreferrer">
             <TelegramIcon />
           </SC.ContactButton>
-          <SC.ContactButton href="https://wa.me/+7(921)39-79-888">
+          <SC.ContactButton href="https://wa.me/79213979888" target="_blank" rel="noopener noreferrer">
             <WhatsappIcon />
           </SC.ContactButton>
         </SC.SocialLinks>

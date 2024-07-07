@@ -22,11 +22,7 @@ export const Contacts = () => {
             <strong>{t("Contacts.caption")}</strong>
             <SC.Text>
               {t("Contacts.phone")}:&nbsp;
-              <SC.Link
-                href="tel:+7(921)39-79-888"
-              >
-                +7(921)39-79-888
-              </SC.Link>
+              <SC.Link href="tel:+7(921)39-79-888">+7(921)39-79-888</SC.Link>
             </SC.Text>
             <SC.Text>
               {t("Contacts.email")}:&nbsp;
@@ -36,11 +32,17 @@ export const Contacts = () => {
             </SC.Text>
             <SC.SocialLinks>
               <SC.ContactButton
-                href="https://t.me/+7(921)39-79-888"
+                href="https://t.me/+79213979888"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <SC.Telegram color={Color.Black} />
               </SC.ContactButton>
-              <SC.ContactButton href="https://wa.me/+7(921)39-79-888">
+              <SC.ContactButton
+                href="https://wa.me/79213979888"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SC.Whatsapp color={Color.Black} />
               </SC.ContactButton>
             </SC.SocialLinks>

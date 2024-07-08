@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-import main from "@static/images/main_background.png";
 import logo from "@static/images/main_logo.png";
 
-import { mediaQueries } from "@shared";
+import { Color, mediaQueries } from "@shared";
 import { PhotoRatioType } from "@shared/types";
 import { Slider } from "@shared/ui";
 
@@ -12,10 +11,6 @@ export const Wrapper = styled.section`
   width: 100%;
 
   background-size: cover;
-
-  ${mediaQueries.gt.Desktop} {
-    /* height: 100vh; */
-  }
 
   & .slick-slider {
     position: relative;
@@ -48,6 +43,8 @@ export const Wrapper = styled.section`
 `;
 
 export const ImageWrapper = styled(Slider.ImageWrapper)`
+  background: ${Color.Haki};
+  
   ${mediaQueries.gt.Desktop} {
     height: 100vh;
   }
@@ -64,11 +61,7 @@ export const Image = styled.img<{
     max-height: calc(100vh);
   }
 
-  ${({ photoType }) =>
-    photoType === 'VERTICAL' &&
-    `
-    width: 75vw;
-  `}
+  ${({ photoType }) => photoType === "VERTICAL" && `width: 75vw;`}
 `;
 
 export const MainSlide = styled.div<{
@@ -82,15 +75,32 @@ export const MainSlide = styled.div<{
   justify-content: center;
 
   height: calc(100vh - 60px);
-  
-  background: url(${main});
-  backdrop-filter: blur(10px);
-  background-size: cover;
 
   ${mediaQueries.gt.Desktop} {
     height: 100vh;
   }
+`;
 
+export const SlideBackground = styled.img`
+  position: absolute;
+  bottom: 0;
+  left: -200px;
+
+  backdrop-filter: blur(10px);
+  height: 100%;
+
+  z-index: -1;
+
+  ${mediaQueries.gt.Tablet} {
+    left: 0;
+
+    width: 100%;
+  }
+
+  ${mediaQueries.gt.Desktop} {
+    height: 100vh;
+    width: 100vw;
+  }
 `;
 
 export const MainText = styled.h1`

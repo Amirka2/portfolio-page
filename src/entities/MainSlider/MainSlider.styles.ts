@@ -86,7 +86,7 @@ export const SlideBackground = styled.img`
   bottom: 0;
   left: -200px;
 
-  backdrop-filter: blur(10px);
+  filter: blur(1px);
   height: 100%;
 
   z-index: -1;

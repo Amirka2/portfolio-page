@@ -44,7 +44,7 @@ export const Wrapper = styled.section`
 
 export const ImageWrapper = styled(Slider.ImageWrapper)`
   background: ${Color.Haki};
-  
+
   ${mediaQueries.gt.Desktop} {
     height: 100vh;
   }
@@ -98,8 +98,10 @@ export const SlideBackground = styled.img`
   }
 
   ${mediaQueries.gt.Desktop} {
-    height: 100vh;
+    height: auto;
     width: 100vw;
+
+    aspect-ratio: 1;
   }
 `;
 
@@ -130,9 +132,15 @@ export const SecondaryText = styled.h2`
 `;
 
 export const MainImage = styled.div`
-  width: 106px;
-  height: 100px;
+  width: 38px;
+  height: 36px;
 
   background: url(${logo});
+  background-size: cover;
   margin-bottom: 8px;
+
+  ${mediaQueries.gt.Desktop} {
+    width: 106px;
+    height: 100px;
+  }
 `;

@@ -4,14 +4,13 @@ import axios, { AxiosResponse } from "axios";
 import { Work } from "@entities/Work";
 import { API_PATH } from "@shared";
 
-const getRandomPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork`);
+const getRandomPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork/carousel`);
 
 // TODO сменить фото, когда будут выбраны
-const selectPhotos = ({ data }: AxiosResponse<Work[]>) =>
-    data.slice(1, 5);
+const selectPhotos = ({ data }: AxiosResponse<Work[]>) => data;
 
 export const useMainSliderPhotos = () => useQuery({
-    queryKey: ['photos', 'random'],
+    queryKey: ['photos', 'main-slider'],
     queryFn: getRandomPhotos,
     refetchOnMount: false,
     refetchOnWindowFocus: false,

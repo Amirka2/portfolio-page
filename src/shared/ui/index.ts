@@ -11,3 +11,4 @@ export * from './Modal';
 export * from './Burger';
 export * from './PageWrapper';
 export * from './Dropdown';
+export * from './Loader';

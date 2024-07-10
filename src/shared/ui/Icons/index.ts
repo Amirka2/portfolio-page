@@ -4,3 +4,4 @@ export { Arrow as ArrowIcon } from './Arrow';
 export { Burger as BurgerIcon } from './Burger';
 export { MiniArrow as MiniArrowIcon } from './MiniArrow';
 export { Cross as CrossIcon } from './Cross';
+export { Spinner as SpinnerIcon } from './Spinner';

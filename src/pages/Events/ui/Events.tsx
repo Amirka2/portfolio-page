@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { useTranslation } from "@shared/hooks";
 import { getPhotoPath, setResources } from "@shared/libs";
-import { Container } from "@shared/ui";
+import { Container, Loader } from "@shared/ui";
 import { Event, prepareEventsDescriptions } from "@entities/Event";
 
 import { useEvents } from "../api";
@@ -25,7 +25,7 @@ export const Events = () => {
   }, [data]);
 
   if (isPending) {
-    return <>loading</>;
+    return <Loader />;
   }
 
   if (isError) {

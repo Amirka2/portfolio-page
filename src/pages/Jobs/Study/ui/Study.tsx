@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+import { Loader } from "@shared/ui";
 import { setResources } from "@shared/libs";
 import { prepareWorksDescriptions } from "@entities/Jobs";
 import { Gallery } from "@widgets/Gallery";
@@ -22,7 +23,7 @@ export const Study = () => {
   }, [data]);
 
   if (isPending) {
-    return <>loading</>;
+    return <Loader />;
   }
 
   if (isError) {

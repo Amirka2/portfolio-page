@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { useTranslation } from "@shared/hooks";
 import { getPhotoPath, setResources } from "@shared/libs";
-import { Container } from "@shared/ui";
+import { Container, Loader } from "@shared/ui";
 import {
   preparePublicationsDescriptions,
   Publication,
@@ -27,7 +27,7 @@ export const Publications = () => {
   }, [data]);
 
   if (isPending) {
-    return <>loading</>;
+    return <Loader />;
   }
 
   if (isError) {

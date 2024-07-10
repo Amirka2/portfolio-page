@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+import { Loader } from "@shared/ui";
 import { setResources } from "@shared/libs";
 import { prepareWorksDescriptions } from "@entities/Jobs";
 import { Gallery } from "@widgets/Gallery";
@@ -7,7 +8,6 @@ import { Gallery } from "@widgets/Gallery";
 import * as GS from "../../ui";
 
 import { useSceneries } from "../api";
-import * as SC from "./Scenery.styles";
 
 const CATEGORY_KEY = "JobsScenery";
 
@@ -22,7 +22,7 @@ export const Scenery = () => {
   }, [data]);
 
   if (isPending) {
-    return <>loading</>;
+    return <Loader />;
   }
 
   if (isError) {

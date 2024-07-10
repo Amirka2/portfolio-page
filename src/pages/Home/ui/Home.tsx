@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Loader } from "@shared/ui";
 import { MainSlider } from "@entities/MainSlider";
 import { BioMain } from "@entities/Bio";
 import { Jobs } from "@entities/Jobs";
@@ -11,7 +12,7 @@ export const Home = () => {
   const { data, isPending, isError } = useMainSliderPhotos();
 
   if (isPending) {
-    return <>loading</>
+    return <Loader />
   }
 
   if (isError) {

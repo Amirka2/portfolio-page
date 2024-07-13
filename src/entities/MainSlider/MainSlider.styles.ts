@@ -84,20 +84,21 @@ export const MainSlide = styled.div<{
 export const SlideBackground = styled.img`
   position: absolute;
   bottom: 0;
-  left: -200px;
+  left: 0;
 
   filter: blur(1px);
   height: 100%;
+  width: 100%;
 
   z-index: -1;
 
   ${mediaQueries.gt.Tablet} {
-    left: 0;
-
     width: 100%;
   }
 
   ${mediaQueries.gt.Desktop} {
+    bottom: -300px;
+
     height: auto;
     width: 100vw;
 

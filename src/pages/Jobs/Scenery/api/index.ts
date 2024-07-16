@@ -8,7 +8,7 @@ import { selectPhotos } from "../../libs";
 
 const SCENERY_ID = 3;
 
-const getSceneryPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork?category_id=${SCENERY_ID}`);
+const getSceneryPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork/?category_id=${SCENERY_ID}`);
 
 export const useSceneries = () => useQuery({
     queryKey: ['photos', 'scenery'],

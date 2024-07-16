@@ -8,7 +8,7 @@ import { mapResponseToPublication } from '../libs';
 
 const PUBLICATIONS_ID = 6;
 
-const getPublications = () => axios.get<PublicationResponse[]>(`${API_PATH}/artwork?category_id=${PUBLICATIONS_ID}`);
+const getPublications = () => axios.get<PublicationResponse[]>(`${API_PATH}/artwork/?category_id=${PUBLICATIONS_ID}`);
 
 export const usePublications = () => useQuery({
     queryKey: ['publications'],

@@ -9,7 +9,7 @@ import type{ EventResponse } from './types';
 
 const EVENTS_ID = 7;
 
-const getEvents = () => axios.get<EventResponse[]>(`${API_PATH}/artwork?category_id=${EVENTS_ID}`);
+const getEvents = () => axios.get<EventResponse[]>(`${API_PATH}/artwork/?category_id=${EVENTS_ID}`);
 
 export const useEvents = () => useQuery({
     queryKey: ['events'],

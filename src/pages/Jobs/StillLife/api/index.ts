@@ -8,7 +8,7 @@ import { selectPhotos } from "../../libs";
 
 const STILL_LIFE_ID = 2;
 
-const getStillLifePhotos = () => axios.get<Work[]>(`${API_PATH}/artwork?category_id=${STILL_LIFE_ID}`);
+const getStillLifePhotos = () => axios.get<Work[]>(`${API_PATH}/artwork/?category_id=${STILL_LIFE_ID}`);
 
 export const useStillLifes = () => useQuery({
     queryKey: ['photos', 'still-life'],

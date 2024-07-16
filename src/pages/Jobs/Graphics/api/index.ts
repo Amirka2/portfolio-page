@@ -8,7 +8,7 @@ import { selectPhotos } from '../../libs';
 
 const GRAPHICS_ID = 4;
 
-const getGraphicsPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork?category_id=${GRAPHICS_ID}`);
+const getGraphicsPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork/?category_id=${GRAPHICS_ID}`);
 
 export const useGraphics = () => useQuery({
     queryKey: ['photos', 'graphics'],

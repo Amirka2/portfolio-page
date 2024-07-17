@@ -42,10 +42,11 @@ export const Gallery = ({
   return (
     <>
       <SC.PhotosWrapper>
-        {sortedPhotos?.map((column) => (
-          <SC.PhotosColumn maxWidth={maxWidth}>
+        {sortedPhotos?.map((column, index) => (
+          <SC.PhotosColumn maxWidth={maxWidth} key={index}>
             {column.map((work) => (
               <SC.Image
+                key={work.id}
                 onClick={() => {
                   const workIndex = works.findIndex((w) => w.id === work.id);
                   handleClick(workIndex);

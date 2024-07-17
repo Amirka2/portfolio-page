@@ -11,7 +11,7 @@ const STUDY_WORK_ID = 5;
 const getStudyWorkPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork/?category_id=${STUDY_WORK_ID}`);
 
 export const useStudyWorks = () => useQuery({
-    queryKey: ['photos', 'scenery'],
+    queryKey: ['photos', 'study-work'],
     queryFn: getStudyWorkPhotos,
     refetchOnMount: false,
     refetchOnWindowFocus: false,

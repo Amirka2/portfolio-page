@@ -9,7 +9,7 @@ const prepareWorkByLanguage = (works: Work[], language: LanguageType) => {
   works.forEach((work) => {
     res[`${work.id}`] = work.descriptions.find(
       (d) => d.language == language
-    ).description;
+    )?.description ?? '';
   });
 
   return res;
@@ -21,27 +21,27 @@ export const prepareWorksDescriptions = (works: Work[]) => {
 
   return {
     ru,
-    en
+    en,
   };
 };
 
 export const sortPhotos = (photos: Work[], count: number = 3) => {
-    // generating indexes array
-    const keys = Array.from(Array(count).keys());
-  
-    const resultArrayStructure: Array<Work[]> = [];
-  
-    for (const el of keys) {
-      resultArrayStructure.push([]);
-    }
-  
-    return photos.reduce((acc, photo, curI) => {
-      for (const i of keys) {
-        if (curI % count === i) {
-          acc[i].push(photo);
-        }
+  // generating indexes array
+  const keys = Array.from(Array(count).keys());
+
+  const resultArrayStructure: Array<Work[]> = [];
+
+  for (const el of keys) {
+    resultArrayStructure.push([]);
+  }
+
+  return photos.reduce((acc, photo, curI) => {
+    for (const i of keys) {
+      if (curI % count === i) {
+        acc[i].push(photo);
       }
-  
-      return acc;
-    }, resultArrayStructure);
-  };
+    }
+
+    return acc;
+  }, resultArrayStructure);
+};

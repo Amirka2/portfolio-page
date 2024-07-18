@@ -18,7 +18,7 @@ interface GalleryProps {
 export const Gallery = ({
   category,
   works,
-  minWidth = 375,
+  minWidth = 320,
   maxWidth = 450,
 }: GalleryProps) => {
   const [isOpen, setIsOpen] = useState(false);

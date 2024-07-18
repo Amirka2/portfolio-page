@@ -1,10 +1,10 @@
-import styled, {css} from "styled-components";
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom';
+import styled, { css } from 'styled-components';
 
-import { Color } from "../../constants";
+import { Color } from '../../constants';
 
 export const Button = styled.button<{
-  size: "S" | "M";
+  size: 'S' | 'M';
   fullWidth?: boolean;
 }>`
   cursor: pointer;
@@ -16,20 +16,20 @@ export const Button = styled.button<{
   
   border: none;
 
-  ${({size}) => (size === "M") && css`
+  ${({ size }) => (size === 'M') && css`
     font-size: 24px;
 
     padding: 20px 40px;
   `}
   
-  ${({fullWidth}) => fullWidth ? css`
+  ${({ fullWidth }) => (fullWidth ? css`
     width: 100%;
-  ` : null
+  ` : null)
 }
 `;
 
 export const LinkButton = styled(Link)<{
-  size: "S" | "M"
+  size: 'S' | 'M';
 }>`
   cursor: pointer;
   
@@ -44,7 +44,7 @@ export const LinkButton = styled(Link)<{
   border: none;
   border-radius: 8px;
 
-  ${({size}) => (size === "M") && css`
+  ${({ size }) => (size === 'M') && css`
     width: 130px;
     
     font-size: 26px;

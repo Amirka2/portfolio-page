@@ -1,5 +1,6 @@
-import type { LanguageType, LooseObject } from "@shared/types";
-import type { Work } from "@entities/Work";
+import type { LanguageType, LooseObject } from '@shared/types';
+
+import type { Work } from '@entities/Work';
 
 const prepareWorkByLanguage = (works: Work[], language: LanguageType) => {
   type NewType = LooseObject;
@@ -8,7 +9,7 @@ const prepareWorkByLanguage = (works: Work[], language: LanguageType) => {
 
   works.forEach((work) => {
     res[`${work.id}`] = work.descriptions.find(
-      (d) => d.language == language
+      (d) => d.language === language,
     )?.description ?? '';
   });
 
@@ -16,8 +17,8 @@ const prepareWorkByLanguage = (works: Work[], language: LanguageType) => {
 };
 
 export const prepareWorksDescriptions = (works: Work[]) => {
-  const ru = prepareWorkByLanguage(works, "RU");
-  const en = prepareWorkByLanguage(works, "EN");
+  const ru = prepareWorkByLanguage(works, 'RU');
+  const en = prepareWorkByLanguage(works, 'EN');
 
   return {
     ru,
@@ -29,9 +30,9 @@ export const sortPhotos = (photos: Work[], count: number = 3) => {
   // generating indexes array
   const keys = Array.from(Array(count).keys());
 
-  const resultArrayStructure: Array<Work[]> = [];
+  const resultArrayStructure: Work[][] = [];
 
-  for (const el of keys) {
+  for (const _ of keys) {
     resultArrayStructure.push([]);
   }
 

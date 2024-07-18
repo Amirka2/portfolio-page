@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { useTranslation } from "@shared/hooks";
-import { getPhotoPath, setResources } from "@shared/libs";
-import { Container, Loader } from "@shared/ui";
-import { Event, prepareEventsDescriptions } from "@entities/Event";
+import { useTranslation } from '@shared/hooks';
+import { getPhotoPath, setResources } from '@shared/libs';
+import { Container, Loader } from '@shared/ui';
 
-import { useEvents } from "../api";
+import { Event, prepareEventsDescriptions } from '@entities/Event';
 
-import * as SC from "./Events.styles";
+import { useEvents } from '../api';
 
-const EVENTS_KEY = "Events";
+import * as SC from './Events.styles';
+
+const EVENTS_KEY = 'Events';
 
 export const Events = () => {
   const { data, isError, isPending } = useEvents();
   const { t } = useTranslation();
-  const [resourcesReady, setResourcesReady] = useState(false);
+  const [_, setResourcesReady] = useState(false);
 
   useEffect(() => {
     if (data) {
@@ -29,7 +30,11 @@ export const Events = () => {
   }
 
   if (isError) {
-    return <>error</>;
+    return (
+      <>
+        error
+      </>
+    );
   }
 
   return (

@@ -1,5 +1,6 @@
-import { mediaQueries } from "@shared/constants";
-import styled from "styled-components";
+import styled from 'styled-components';
+
+import { mediaQueries } from '@shared/constants';
 
 export const Container = styled.div`
   width: 100%;

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { Color, mediaQueries } from "@shared";
+import { Color, mediaQueries } from '@shared';
 
 export const Footer = styled.footer`
   display: flex;

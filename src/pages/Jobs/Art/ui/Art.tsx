@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import { Loader } from "@shared/ui";
-import { setResources } from "@shared/libs";
-import { prepareWorksDescriptions } from "@entities/Jobs";
-import { Gallery } from "@widgets/Gallery";
+import { setResources } from '@shared/libs';
+import { Loader } from '@shared/ui';
 
-import * as GS from "../../ui";
+import { prepareWorksDescriptions } from '@entities/Jobs';
 
-import { useArtWorks } from "../api";
+import { Gallery } from '@widgets/Gallery';
 
-const CATEGORY_KEY = "JobsArt";
+import * as GS from '../../ui';
+import { useArtWorks } from '../api';
+
+const CATEGORY_KEY = 'JobsArt';
 
 export const Art = () => {
   const { data, isPending, isError } = useArtWorks();
@@ -26,7 +27,11 @@ export const Art = () => {
   }
 
   if (isError) {
-    return <>error</>;
+    return (
+      <>
+        error
+      </>
+    );
   }
 
   return (

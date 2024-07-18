@@ -1,16 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import { TelegramIcon, WhatsappIcon } from "@shared/ui";
-import { useTranslation } from "@shared/hooks";
+import { useTranslation } from '@shared/hooks';
+import { TelegramIcon, WhatsappIcon } from '@shared/ui';
 
-import * as SC from "./Contacts.styles";
+import * as SC from './Contacts.styles';
 
 export const Contacts = () => {
   const { t } = useTranslation();
 
   return (
     <SC.Contacts>
-      <SC.Header>{t("Footer.contacts")}</SC.Header>
+      <SC.Header>
+        {t('Footer.contacts')}
+      </SC.Header>
       <SC.Content>
         <SC.TextLinks>
           <SC.ContactLink

@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { SecondarySlider } from "@entities/SecondarySlider";
-import { type Work } from "@entities/Work";
-import { Modal } from "@shared/ui";
+import { Modal } from '@shared/ui';
 
-import * as SC from "./PhotoWatcher.styles";
+import { SecondarySlider } from '@entities/SecondarySlider';
+import { type Work } from '@entities/Work';
+
+import * as SC from './PhotoWatcher.styles';
 
 interface PhotoWatcherProps {
   category: string;
@@ -20,17 +21,15 @@ export const PhotoWatcher = ({
   onClose,
   works,
   activeWork,
-}: PhotoWatcherProps) => {
-  return (
-    <Modal isOpen={isOpen} onClose={onClose} withOverlay={false}>
-      <SC.Wrapper>
-        <SC.Placeholder></SC.Placeholder>
-        <SecondarySlider
-          works={works}
-          category={category}
-          activeSlide={activeWork}
-        />
-      </SC.Wrapper>
-    </Modal>
-  );
-};
+}: PhotoWatcherProps) => (
+  <Modal isOpen={isOpen} onClose={onClose} withOverlay={false}>
+    <SC.Wrapper>
+      <SC.Placeholder />
+      <SecondarySlider
+        works={works}
+        category={category}
+        activeSlide={activeWork}
+      />
+    </SC.Wrapper>
+  </Modal>
+);

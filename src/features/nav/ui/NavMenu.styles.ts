@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { Link as ReactLink } from "react-router-dom";
+import { Link as ReactLink } from 'react-router-dom';
+import styled from 'styled-components';
 
-import { Color } from "@shared";
+import { Color } from '@shared';
 
 export const Container = styled.nav`
   display: flex;

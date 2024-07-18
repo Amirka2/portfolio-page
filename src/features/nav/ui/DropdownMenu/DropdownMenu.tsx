@@ -1,11 +1,10 @@
-import React, { useRef } from "react";
+import React from 'react';
 
-import { Paths } from "@shared";
-import { useTranslation } from "@shared/hooks";
-import { Dropdown, MiniArrowIcon } from "@shared/ui";
+import { Paths } from '@shared';
+import { useTranslation } from '@shared/hooks';
+import { Dropdown, MiniArrowIcon } from '@shared/ui';
 
-import * as SC from "./DropdownMenu.styles";
-import { MiniArrow } from "@shared/ui/Icons/MiniArrow";
+import * as SC from './DropdownMenu.styles';
 
 export const DropdownMenu = () => {
   const { t } = useTranslation();
@@ -13,7 +12,9 @@ export const DropdownMenu = () => {
   return (
     <Dropdown>
       <Dropdown.Trigger>
-        {({ triggerRef, onClick, close, isOpen }) => (
+        {({
+          triggerRef, onClick, close, isOpen,
+        }) => (
           <SC.Trigger
             onClick={(args) => {
               if (isOpen) {
@@ -24,32 +25,34 @@ export const DropdownMenu = () => {
             }}
             ref={triggerRef}
           >
-            {t("Header.jobs")}
-            <MiniArrowIcon direction="bottom"/>
+            {t('Header.jobs')}
+            <MiniArrowIcon direction="bottom" />
           </SC.Trigger>
         )}
       </Dropdown.Trigger>
       <Dropdown.Menu>
-        {({ position, portalRef, close, triggerRef }) => (
+        {({
+          position, portalRef, close, triggerRef,
+        }) => (
           <SC.Menu
             style={{ maxWidth: triggerRef.current.offsetWidth, ...position }}
             onClick={close}
             ref={portalRef}
           >
             <SC.LinkElement to={Paths.JobsScenery}>
-              {t("Header.jobsSceneries")}
+              {t('Header.jobsSceneries')}
             </SC.LinkElement>
             <SC.LinkElement to={Paths.JobsStillLife}>
-              {t("Header.jobsStillLifes")}
+              {t('Header.jobsStillLifes')}
             </SC.LinkElement>
             <SC.LinkElement to={Paths.JobsArt}>
-              {t("Header.jobsArtWorks")}
+              {t('Header.jobsArtWorks')}
             </SC.LinkElement>
             <SC.LinkElement to={Paths.JobsStudy}>
-              {t("Header.jobsStudyWorks")}
+              {t('Header.jobsStudyWorks')}
             </SC.LinkElement>
             <SC.LinkElement to={Paths.JobsGraphics}>
-              {t("Header.jobsGraphics")}
+              {t('Header.jobsGraphics')}
             </SC.LinkElement>
           </SC.Menu>
         )}

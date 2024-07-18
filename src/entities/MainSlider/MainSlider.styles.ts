@@ -1,10 +1,9 @@
-import styled from "styled-components";
+import logo from '@static/images/main_logo.png';
+import styled from 'styled-components';
 
-import logo from "@static/images/main_logo.png";
-
-import { Color, mediaQueries } from "@shared";
-import { PhotoRatioType } from "@shared/types";
-import { Slider } from "@shared/ui";
+import { Color, mediaQueries } from '@shared';
+import { PhotoRatioType } from '@shared/types';
+import { Slider } from '@shared/ui';
 
 export const Wrapper = styled.section`
   height: calc(100vh - 60px);
@@ -61,7 +60,7 @@ export const Image = styled.img<{
     max-height: calc(100vh);
   }
 
-  ${({ photoType }) => photoType === "VERTICAL" && `width: 75vw;`}
+  ${({ photoType }) => photoType === 'VERTICAL' && 'width: 75vw;'}
 `;
 
 export const MainSlide = styled.div<{

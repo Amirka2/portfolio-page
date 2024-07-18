@@ -1,11 +1,18 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, {
+  ReactNode,
+  useEffect,
+  useState
+} from 'react';
 
 // importing css class for disabling scroll
-import "./styles.css";
-import * as SC from "./Burger.styles";
-import { BurgerIcon, CrossIcon } from "../Icons";
-import { LanguageSwitcher } from "@features/LanguageSwitcher";
-import { createPortal } from "react-dom";
+import './styles.css';
+import { createPortal } from 'react-dom';
+
+import { LanguageSwitcher } from '@features/LanguageSwitcher';
+
+import { BurgerIcon, CrossIcon } from '../Icons';
+
+import * as SC from './Burger.styles';
 
 interface BurgerProps {
   children: ReactNode;
@@ -20,9 +27,9 @@ const BurgerMenu = ({ children }: BurgerProps) => {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add("stop-scrolling");
+      document.body.classList.add('stop-scrolling');
     } else {
-      document.body.classList.remove("stop-scrolling");
+      document.body.classList.remove('stop-scrolling');
     }
   }, [isOpen]);
 
@@ -36,12 +43,14 @@ const BurgerMenu = ({ children }: BurgerProps) => {
           <SC.CrossButton onClick={handleClick}>
             <CrossIcon />
           </SC.CrossButton>
-          <SC.Links onClick={handleClick}>{children}</SC.Links>
+          <SC.Links onClick={handleClick}>
+            {children}
+          </SC.Links>
           <SC.SwitcherWrapper>
             <LanguageSwitcher />
           </SC.SwitcherWrapper>
         </SC.Wrapper>,
-        document.body
+        document.body,
       )}
     </>
   );

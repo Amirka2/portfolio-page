@@ -1,14 +1,16 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import img from '@static/images/main_photo.jpeg';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import img from "@static/images/main_photo.jpeg";
-import { Container, Line, SubTitle, Text } from "@shared/ui";
+import {
+  Container, Line, SubTitle, Text
+} from '@shared/ui';
 
-import * as SC from "./BioAbout.styles";
+import * as SC from './BioAbout.styles';
 
 export const BioAbout = () => {
   const { t } = useTranslation();
-  const info = t("About.info", { returnObjects: true }) as Array<string>;
+  const info = t('About.info', { returnObjects: true }) as string[];
 
   return (
     <Container>
@@ -18,12 +20,16 @@ export const BioAbout = () => {
         </SC.SideBlock>
         <SC.SideBlock>
           <SC.TextWrapper>
-            <SubTitle>{t("About.name")}</SubTitle>
+            <SubTitle>
+              {t('About.name')}
+            </SubTitle>
             <Line />
             <SC.TextList>
               {info.map((infoEl) => (
                 <SC.TextListItem>
-                  <Text>{infoEl}</Text>
+                  <Text>
+                    {infoEl}
+                  </Text>
                 </SC.TextListItem>
               ))}
             </SC.TextList>

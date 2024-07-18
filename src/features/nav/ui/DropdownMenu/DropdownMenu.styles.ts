@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
-import { rgba } from "polished";
-import styled from "styled-components";
+import { rgba } from 'polished';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import { Color } from "@shared";
+import { Color } from '@shared';
 
 const ItemStyles = `
   padding: 22px 52px;

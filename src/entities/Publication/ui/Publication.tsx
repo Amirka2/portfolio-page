@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { Text } from "@shared/ui";
+import { Text } from '@shared/ui';
 
-import * as SC from "./Publication.styles";
+import * as SC from './Publication.styles';
 
 interface PublicationProps {
   photo: string;
@@ -10,16 +10,18 @@ interface PublicationProps {
   year?: string;
 }
 
-export const Publication = ({ photo, text, year }: PublicationProps) => {
-  return (
-    <SC.Wrapper>
-      <SC.Image src={photo} />
-      <SC.Info>
-        <Text>{text}</Text>
-        <Text>
-          <b>{year}</b>
-        </Text>
-      </SC.Info>
-    </SC.Wrapper>
-  );
-};
+export const Publication = ({ photo, text, year }: PublicationProps) => (
+  <SC.Wrapper>
+    <SC.Image src={photo} />
+    <SC.Info>
+      <Text>
+        {text}
+      </Text>
+      <Text>
+        <b>
+          {year}
+        </b>
+      </Text>
+    </SC.Info>
+  </SC.Wrapper>
+);

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { mediaQueries } from "@shared/constants";
+import { mediaQueries } from '@shared/constants';
 
 export const Text = styled.p`
     font-size: 20px;

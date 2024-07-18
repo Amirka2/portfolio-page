@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import {Color} from "../../constants";
+import { Color } from '../../constants';
 
 export const Line = styled.div`
     height: 1px;

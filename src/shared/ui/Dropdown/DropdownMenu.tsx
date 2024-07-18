@@ -1,13 +1,13 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
+import { createPortal } from 'react-dom';
 
-import { createPortal } from "react-dom";
-import { DropdownContextValue, useDropdown } from "./Dropdown.context";
+import { DropdownContextValue, useDropdown } from './Dropdown.context';
 
 export interface DropdownMenuProps {
   children: (
     props: Pick<
-      DropdownContextValue,
-      "position" | "portalRef" | "close" | "triggerRef"
+    DropdownContextValue,
+    'position' | 'portalRef' | 'close' | 'triggerRef'
     >
   ) => ReactElement;
 }
@@ -15,14 +15,18 @@ export interface DropdownMenuProps {
 export const DropdownMenu = (props: DropdownMenuProps) => {
   const { children } = props;
 
-  const { position, portalRef, close, isOpen, triggerRef } = useDropdown();
+  const {
+    position, portalRef, close, isOpen, triggerRef,
+  } = useDropdown();
 
   if (!isOpen) {
     return null;
   }
 
   return createPortal(
-    children({ position, portalRef, close, triggerRef }),
-    document.body
+    children({
+      position, portalRef, close, triggerRef,
+    }),
+    document.body,
   );
 };

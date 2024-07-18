@@ -1,11 +1,11 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-import { Paths } from "@shared";
-import { Burger, Container } from "@shared/ui";
-import { useTranslation } from "@shared/hooks";
+import { Paths } from '@shared';
+import { useTranslation } from '@shared/hooks';
+import { Burger, Container } from '@shared/ui';
 
-import * as SC from "./Mobile.styles";
+import * as SC from './Mobile.styles';
 
 export const Mobile = () => {
   const { t } = useTranslation();
@@ -15,58 +15,60 @@ export const Mobile = () => {
     <Container>
       <SC.Header>
         <SC.Wrapper>
-          <SC.MainText>{t("Header.name")}</SC.MainText>
+          <SC.MainText>
+            {t('Header.name')}
+          </SC.MainText>
           <Burger>
             <Burger.Link to={Paths.Main} isActive={Paths.Main === pathname}>
-              {t("Header.main")}
+              {t('Header.main')}
             </Burger.Link>
             <Burger.Link to={Paths.About} isActive={Paths.About === pathname}>
-              {t("Header.about")}
+              {t('Header.about')}
             </Burger.Link>
             <Burger.Link
               to={Paths.JobsScenery}
               isActive={Paths.JobsScenery === pathname}
             >
-              {t("Header.jobsSceneries")}
+              {t('Header.jobsSceneries')}
             </Burger.Link>
             <Burger.Link
               to={Paths.JobsStillLife}
               isActive={Paths.JobsStillLife === pathname}
             >
-              {t("Header.jobsStillLifes")}
+              {t('Header.jobsStillLifes')}
             </Burger.Link>
             <Burger.Link
               to={Paths.JobsArt}
               isActive={Paths.JobsArt === pathname}
             >
-              {t("Header.jobsArtWorks")}
+              {t('Header.jobsArtWorks')}
             </Burger.Link>
             <Burger.Link
               to={Paths.JobsStudy}
               isActive={Paths.JobsStudy === pathname}
             >
-              {t("Header.jobsStudyWorks")}
+              {t('Header.jobsStudyWorks')}
             </Burger.Link>
             <Burger.Link
               to={Paths.JobsGraphics}
               isActive={Paths.JobsGraphics === pathname}
             >
-              {t("Header.jobsGraphics")}
+              {t('Header.jobsGraphics')}
             </Burger.Link>
             <Burger.Link
               to={Paths.Publications}
               isActive={Paths.Publications === pathname}
             >
-              {t("Header.publications")}
+              {t('Header.publications')}
             </Burger.Link>
             <Burger.Link to={Paths.Events} isActive={Paths.Events === pathname}>
-              {t("Header.events")}
+              {t('Header.events')}
             </Burger.Link>
             <Burger.Link
               to={Paths.Contacts}
               isActive={Paths.Contacts === pathname}
             >
-              {t("Header.contacts")}
+              {t('Header.contacts')}
             </Burger.Link>
           </Burger>
         </SC.Wrapper>

@@ -1,1 +1,1 @@
-export { PhotoWithTitle } from "./PhotoWithTitle";
+export { PhotoWithTitle } from './PhotoWithTitle';

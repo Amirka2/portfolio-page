@@ -1,10 +1,10 @@
-import React, { ComponentPropsWithoutRef } from "react";
+import React, { ComponentPropsWithoutRef } from 'react';
 
-import { Color } from "@shared/constants";
+import { Color } from '@shared/constants';
 
-interface MiniArrowProps extends ComponentPropsWithoutRef<"svg"> {
-    direction?: "top" | "left" | "right" | "bottom";
-  }
+interface MiniArrowProps extends ComponentPropsWithoutRef<'svg'> {
+  direction?: 'top' | 'left' | 'right' | 'bottom';
+}
 
 export const MiniArrow = ({
   width = 13,
@@ -14,21 +14,24 @@ export const MiniArrow = ({
   ...rest
 }: MiniArrowProps) => {
   const directionStyles = {
-    rotate: "0deg",
+    rotate: '0deg',
   };
 
   switch (direction) {
-    case "right":
-      directionStyles.rotate = "90deg";
+    case 'right':
+      directionStyles.rotate = '90deg';
       break;
 
-    case "left":
-      directionStyles.rotate = "-90deg";
+    case 'left':
+      directionStyles.rotate = '-90deg';
       break;
 
-    case "bottom":
-      directionStyles.rotate = "180deg";
+    case 'bottom':
+      directionStyles.rotate = '180deg';
       break;
+
+    default:
+      return null;
   }
 
   return (
@@ -43,9 +46,9 @@ export const MiniArrow = ({
       <path
         d="M11.1736 1.21133L6.11154 6.14844L1.17442 1.08634"
         stroke={color}
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

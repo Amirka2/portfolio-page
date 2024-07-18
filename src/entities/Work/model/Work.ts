@@ -1,4 +1,4 @@
-import type { LanguageType, PhotoRatioType } from "@shared/types";
+import type { LanguageType, PhotoRatioType } from '@shared/types';
 
 export interface WorkDescription {
   language: LanguageType;

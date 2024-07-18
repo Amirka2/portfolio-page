@@ -1,7 +1,7 @@
-import React, { PropsWithChildren } from "react";
-import { createPortal } from "react-dom";
+import React, { PropsWithChildren } from 'react';
+import { createPortal } from 'react-dom';
 
-import * as Styles from "./Modal.styles";
+import * as Styles from './Modal.styles';
 
 interface ModalProps {
   isOpen: boolean;
@@ -19,22 +19,26 @@ export const Modal = ({
     e.stopPropagation();
   };
 
-  const modalRoot = document.getElementById("modal-root");
+  const modalRoot = document.getElementById('modal-root');
 
   const renderContent = () => (
     <Styles.Box onClick={stopPropagation} withOverlay={withOverlay}>
-      <Styles.CloseButton onClick={onClose}>x</Styles.CloseButton>
-      <Styles.Content>{children}</Styles.Content>
+      <Styles.CloseButton onClick={onClose}>
+        x
+      </Styles.CloseButton>
+      <Styles.Content>
+        {children}
+      </Styles.Content>
     </Styles.Box>
   );
 
   return (
-    <>
-      {isOpen &&
-        createPortal(
-          <Styles.Overlay onClick={onClose}>{renderContent()}</Styles.Overlay>,
-          modalRoot
-        )}
-    </>
+    isOpen
+    && createPortal(
+      <Styles.Overlay onClick={onClose}>
+        {renderContent()}
+      </Styles.Overlay>,
+      modalRoot,
+    )
   );
 };

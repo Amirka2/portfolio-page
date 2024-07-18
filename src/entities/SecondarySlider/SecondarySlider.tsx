@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { useTranslation } from "@shared/hooks";
-import { getPhotoPath } from "@shared/libs";
-import { Slider } from "@shared/ui";
-import type { Work } from "@entities/Work";
+import { useTranslation } from '@shared/hooks';
+import { getPhotoPath } from '@shared/libs';
+import { Slider } from '@shared/ui';
 
-import * as SC from "./SecondarySlider.styles";
+import type { Work } from '@entities/Work';
+
+import * as SC from './SecondarySlider.styles';
 
 interface PhotoSliderProps {
   category: string;
@@ -30,7 +31,9 @@ export const SecondarySlider = ({
               alt={t(`${category}.${work?.id}`)}
               isLimitedHeight={work.position === 'VERTICAL'}
             />
-            <SC.Description>{t(`${category}.${work?.id}`)}</SC.Description>
+            <SC.Description>
+              {t(`${category}.${work?.id}`)}
+            </SC.Description>
           </Slider.ImageWrapper>
         ))}
       </Slider>

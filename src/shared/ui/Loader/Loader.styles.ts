@@ -1,8 +1,8 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
-import { mediaQueries } from "@shared/constants";
+import { mediaQueries } from '@shared/constants';
 
-import { SpinnerIcon } from "../Icons";
+import { SpinnerIcon } from '../Icons';
 
 const Keyframes = keyframes`
   from {

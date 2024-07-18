@@ -1,19 +1,20 @@
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
-import { API_PATH } from "@shared";
-import { Work } from "@entities/Work";
+import { API_PATH } from '@shared';
 
-import { selectPhotos } from "../../libs";
+import { Work } from '@entities/Work';
+
+import { selectPhotos } from '../../libs';
 
 const STUDY_WORK_ID = 5;
 
 const getStudyWorkPhotos = () => axios.get<Work[]>(`${API_PATH}/artwork/?category_id=${STUDY_WORK_ID}`);
 
 export const useStudyWorks = () => useQuery({
-    queryKey: ['photos', 'study-work'],
-    queryFn: getStudyWorkPhotos,
-    refetchOnMount: false,
-    refetchOnWindowFocus: false,
-    select: selectPhotos
-})
+  queryKey: ['photos', 'study-work'],
+  queryFn: getStudyWorkPhotos,
+  refetchOnMount: false,
+  refetchOnWindowFocus: false,
+  select: selectPhotos,
+});

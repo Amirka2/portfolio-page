@@ -1,3 +1,13 @@
+# Продакшн
+
+https://www.katerina-dorohova.ru
+
+![plot](./repo/images/screenshot_main.png)
+
+![plot](./repo/images/screenshot_gallery.png)
+
+# Разработка
+
 - для загрузки пакетов``
 npm i
 ``
@@ -10,12 +20,12 @@ cp .env.example .env
 npm run start
 ``
 
-Используется методология feature-sliced-design
-Технологоии, библиотеки: 
+### Используется методология feature-sliced-design
+### Технологоии, библиотеки: 
 - typescript
+- react
 - webpack
-- i18n
+- i18next
 - axios
 - tanstackQuery
 - react-slick
-

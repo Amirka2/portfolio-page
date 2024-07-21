@@ -1,8 +1,8 @@
-import { Link as BaseLink } from "react-router-dom";
-import { rgba } from "polished";
-import styled from "styled-components";
+import { rgba } from 'polished';
+import { Link as BaseLink } from 'react-router-dom';
+import styled from 'styled-components';
 
-import { Color, mediaQueries } from "@shared";
+import { Color, mediaQueries } from '@shared';
 
 export const Link = styled(BaseLink)`
   width: 100%;

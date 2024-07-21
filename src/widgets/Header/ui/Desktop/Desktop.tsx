@@ -1,13 +1,14 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-import { Paths } from "@shared";
-import { Line } from "@shared/ui";
-import { useTranslation } from "@shared/hooks";
-import { NavMenu } from "@features/nav";
-import { LanguageSwitcher } from "@features/LanguageSwitcher";
+import { Paths } from '@shared';
+import { useTranslation } from '@shared/hooks';
+import { Line } from '@shared/ui';
 
-import * as SC from "./Desktop.styles";
+import { LanguageSwitcher } from '@features/LanguageSwitcher';
+import { NavMenu } from '@features/nav';
+
+import * as SC from './Desktop.styles';
 
 export const Desktop = () => {
   const { t } = useTranslation();
@@ -19,8 +20,10 @@ export const Desktop = () => {
         <SC.Wrapper>
           <SC.TopLine>
             <SC.Placeholder />
-            <SC.MainText>{t("Header.name")}</SC.MainText>
-            <LanguageSwitcher hasChinese={location.pathname === Paths.About}/>
+            <SC.MainText>
+              {t('Header.name')}
+            </SC.MainText>
+            <LanguageSwitcher hasChinese={location.pathname === Paths.About} />
           </SC.TopLine>
           <Line />
           <NavMenu />

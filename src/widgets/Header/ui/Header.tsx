@@ -1,18 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Mobile } from "./Mobile";
-import { Desktop } from "./Desktop";
-import * as SC from "./Header.styles";
+import { Desktop } from './Desktop';
+import * as SC from './Header.styles';
+import { Mobile } from './Mobile';
 
-export const Header = () => {
-  return (
-    <>
-      <SC.MobileHeader>
-        <Mobile />
-      </SC.MobileHeader>
-      <SC.DesktopHeader>
-        <Desktop />
-      </SC.DesktopHeader>
-    </>
-  );
-};
+export const Header = () => (
+  <>
+    <SC.MobileHeader>
+      <Mobile />
+    </SC.MobileHeader>
+    <SC.DesktopHeader>
+      <Desktop />
+    </SC.DesktopHeader>
+  </>
+);

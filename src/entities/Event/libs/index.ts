@@ -1,16 +1,16 @@
-import type { LanguageType, LooseObject, Resources } from "@shared/types";
+import type { LanguageType, LooseObject, Resources } from '@shared/types';
 
-import type { EventModel } from "../model";
+import type { EventModel } from '../model';
 
 const prepareEventByLanguage = (
   publications: EventModel[],
-  language: LanguageType
+  language: LanguageType,
 ) => {
   const res: LooseObject = {};
 
   publications.forEach((publication) => {
     res[`${publication.id}`] = publication.descriptions.find(
-      (d) => d.language == language
+      (d) => d.language === language,
     ).description;
   });
 
@@ -18,8 +18,8 @@ const prepareEventByLanguage = (
 };
 
 export const prepareEventsDescriptions = (publications: EventModel[]): Resources => {
-  const ru = prepareEventByLanguage(publications, "RU");
-  const en = prepareEventByLanguage(publications, "EN");
+  const ru = prepareEventByLanguage(publications, 'RU');
+  const en = prepareEventByLanguage(publications, 'EN');
 
   return {
     ru,

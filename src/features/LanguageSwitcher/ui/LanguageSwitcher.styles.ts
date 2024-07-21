@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -18,9 +18,8 @@ export const Button = styled.button<{
   line-height: 28px;
   color: ${({ color }) => color};
 
-  ${({ isActive }) =>
-    isActive &&
-    `
+  ${({ isActive }) => isActive
+    && `
       font-weight: 700;
     `}
 `;

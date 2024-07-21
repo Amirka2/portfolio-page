@@ -1,6 +1,6 @@
-import i18next from "i18next";
+import i18next from 'i18next';
 
-import type { Resources } from "@shared/types";
+import type { Resources } from '@shared/types';
 
 export const setResources = (data: Resources, key: string) => {
   const resources = {
@@ -12,6 +12,6 @@ export const setResources = (data: Resources, key: string) => {
     },
   };
 
-  i18next.addResourceBundle("ru", "translation", resources.ru, true, true);
-  i18next.addResourceBundle("en", "translation", resources.en, true, true);
+  i18next.addResourceBundle('ru', 'translation', resources.ru, true, true);
+  i18next.addResourceBundle('en', 'translation', resources.en, true, true);
 };

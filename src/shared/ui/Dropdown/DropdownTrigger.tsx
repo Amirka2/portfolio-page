@@ -8,7 +8,11 @@ export interface DropdownTriggerProps {
 
 export const DropdownTrigger = (props: DropdownTriggerProps) => {
   const { children } = props;
-  const { onClick, triggerRef, isOpen, close } = useDropdown();
+  const {
+    onClick, triggerRef, isOpen, close,
+  } = useDropdown();
 
-  return children({ onClick, triggerRef, isOpen, close });
+  return children({
+    onClick, triggerRef, isOpen, close,
+  });
 };

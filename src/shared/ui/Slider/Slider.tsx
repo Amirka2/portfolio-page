@@ -1,12 +1,13 @@
-import React, { ReactNode } from "react";
-import SlickSlider, { Settings } from "react-slick";
+import React, { ReactNode } from 'react';
+import SlickSlider, { Settings } from 'react-slick';
 
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 
-import * as SC from "./Slider.styles";
-import { useWindowSize } from "@shared/hooks";
-import { Breakpoints } from "@shared/constants";
+import { Breakpoints } from '@shared/constants';
+import { useWindowSize } from '@shared/hooks';
+
+import * as SC from './Slider.styles';
 
 const BASE_SETTINGS: Settings = {
   dots: false,
@@ -29,7 +30,7 @@ export const BaseSlider = ({
 }: SliderProps) => {
   const [width] = useWindowSize();
   const arrows = {
-    arrows: width > Breakpoints.Desktop
+    arrows: width > Breakpoints.Desktop,
   };
 
   return (

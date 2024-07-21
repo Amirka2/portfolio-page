@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import * as SC from "./Loader.styles";
+import * as SC from './Loader.styles';
 
-export const Loader = () => {
-  return (
-    <SC.Wrapper>
-      <SC.Spinner />
-    </SC.Wrapper>
-  );
-};
+export const Loader = () => (
+  <SC.Wrapper>
+    <SC.Spinner />
+  </SC.Wrapper>
+);

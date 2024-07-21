@@ -1,8 +1,12 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React from "react";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { Paths } from "@shared";
-import { PageWrapper } from "@shared/ui";
+import { Paths } from '@shared';
+import { PageWrapper } from '@shared/ui';
+
+import { Footer } from '@widgets/Footer';
+import { Header } from '@widgets/Header';
+
 import {
   About,
   ArtJobs,
@@ -14,10 +18,8 @@ import {
   Publications,
   SceneryJobs,
   StillLifeJobs,
-  StudyJobs,
-} from "@pages";
-import { Header } from "@widgets/Header";
-import { Footer } from "@widgets/Footer";
+  StudyJobs
+} from '@pages';
 
 export const Router = () => (
   <BrowserRouter basename={Paths.Main}>

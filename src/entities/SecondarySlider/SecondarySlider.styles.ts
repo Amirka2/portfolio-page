@@ -1,5 +1,6 @@
-import { Color, mediaQueries } from "@shared";
-import styled from "styled-components";
+import styled from 'styled-components';
+
+import { Color, mediaQueries } from '@shared';
 
 export const Wrapper = styled.div`
   height: 100%;
@@ -57,9 +58,8 @@ export const Image = styled.img<{
     max-height: calc(100vh - 100px);
   }
 
-  ${({ isLimitedHeight }) =>
-    isLimitedHeight &&
-    `
+  ${({ isLimitedHeight }) => isLimitedHeight
+    && `
     width: 75vw;
   `}
 `;

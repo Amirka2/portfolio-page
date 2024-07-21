@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { mediaQueries } from "@shared";
+import { mediaQueries } from '@shared';
 
 export const Wrapper = styled.div`
   display: flex;

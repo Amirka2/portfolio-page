@@ -1,5 +1,6 @@
-import { Work } from "@entities/Work";
-import { AxiosResponse } from "axios";
+import { AxiosResponse } from 'axios';
+
+import { Work } from '@entities/Work';
 
 export const generateArray = (array: any[], capacity: number) => {
   let i = 0;

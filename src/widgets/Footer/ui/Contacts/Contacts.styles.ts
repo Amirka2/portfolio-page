@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { rgba } from "polished";
+import { rgba } from 'polished';
+import styled from 'styled-components';
 
-import { Color, mediaQueries } from "@shared";
+import { Color, mediaQueries } from '@shared';
 
 export const Header = styled.h5`
   font-size: 14px;

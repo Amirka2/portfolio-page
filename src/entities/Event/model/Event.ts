@@ -1,4 +1,4 @@
-import type { LanguageType, PhotoRatioType } from "@shared/types";
+import type { LanguageType, PhotoRatioType } from '@shared/types';
 
 export interface EventDescription {
   language: LanguageType;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PhotosWrapper = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const PhotosColumn = styled.div<{
   flex-direction: column;
   gap: 8px;
 
-  max-width: ${({ maxWidth }) => maxWidth + "px"};
+  max-width: ${({ maxWidth }) => `${maxWidth}px`};
 `;
 
 export const Image = styled.img`

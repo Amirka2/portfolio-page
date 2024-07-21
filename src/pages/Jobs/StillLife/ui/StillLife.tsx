@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import { Loader } from "@shared/ui";
-import { setResources } from "@shared/libs";
-import { prepareWorksDescriptions } from "@entities/Jobs";
-import { Gallery } from "@widgets/Gallery";
+import { setResources } from '@shared/libs';
+import { Loader } from '@shared/ui';
 
-import * as GS from "../../ui";
+import { prepareWorksDescriptions } from '@entities/Jobs';
 
-import { useStillLifes } from "../api";
-import * as SC from "./StillLife.styles";
+import { Gallery } from '@widgets/Gallery';
 
-const CATEGORY_KEY = "JobsStillLife";
+import * as GS from '../../ui';
+import { useStillLifes } from '../api';
+
+const CATEGORY_KEY = 'JobsStillLife';
 
 export const StillLife = () => {
   const { data, isPending, isError } = useStillLifes();
@@ -27,7 +27,11 @@ export const StillLife = () => {
   }
 
   if (isError) {
-    return <>error</>;
+    return (
+      <>
+        error
+      </>
+    );
   }
 
   return (

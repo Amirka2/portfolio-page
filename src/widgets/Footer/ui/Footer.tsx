@@ -1,14 +1,15 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-import { Color, Paths } from "@shared";
-import { ArrowIcon, Container } from "@shared/ui";
-import { useTranslation } from "@shared/hooks";
-import { LanguageSwitcher } from "@features/LanguageSwitcher";
+import { Color, Paths } from '@shared';
+import { useTranslation } from '@shared/hooks';
+import { ArrowIcon, Container } from '@shared/ui';
 
-import { Nav } from "./Nav";
-import { Contacts } from "./Contacts";
-import * as SC from "./Footer.styles";
+import { LanguageSwitcher } from '@features/LanguageSwitcher';
+
+import { Contacts } from './Contacts';
+import * as SC from './Footer.styles';
+import { Nav } from './Nav';
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -32,7 +33,13 @@ export const Footer = () => {
           </SC.MainInfo>
           <SC.SubInfo>
             <SC.Caption>
-              © {t("Footer.name")} — {new Date().getFullYear()}
+              ©
+              {' '}
+              {t('Footer.name')}
+              {' '}
+              —
+              {' '}
+              {new Date().getFullYear()}
             </SC.Caption>
             <LanguageSwitcher
               color={Color.White}

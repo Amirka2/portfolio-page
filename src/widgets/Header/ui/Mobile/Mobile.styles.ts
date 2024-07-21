@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { Color } from "@shared";
+import { Color } from '@shared';
 
 export const Header = styled.header`
   position: fixed;

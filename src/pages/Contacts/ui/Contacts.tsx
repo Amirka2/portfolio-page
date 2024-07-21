@@ -1,12 +1,11 @@
-import React from "react";
+import img from '@static/images/contacts.jpg';
+import React from 'react';
 
-import img from "@static/images/contacts.jpg";
+import { Color } from '@shared';
+import { useTranslation } from '@shared/hooks';
+import { Container, Line, SubTitle } from '@shared/ui';
 
-import { Color } from "@shared";
-import { Container, Line, SubTitle } from "@shared/ui";
-import { useTranslation } from "@shared/hooks";
-
-import * as SC from "./Contacts.styles";
+import * as SC from './Contacts.styles';
 
 export const Contacts = () => {
   const { t } = useTranslation();
@@ -17,15 +16,23 @@ export const Contacts = () => {
         <SC.Main>
           <SC.Image src={img} alt="contacts image" />
           <SC.Info>
-            <SubTitle>{t("Contacts.name")}</SubTitle>
+            <SubTitle>
+              {t('Contacts.name')}
+            </SubTitle>
             <Line />
-            <strong>{t("Contacts.caption")}</strong>
+            <strong>
+              {t('Contacts.caption')}
+            </strong>
             <SC.Text>
-              {t("Contacts.phone")}:&nbsp;
-              <SC.Link href="tel:+7(921)39-79-888">+7(921)39-79-888</SC.Link>
+              {t('Contacts.phone')}
+              :&nbsp;
+              <SC.Link href="tel:+7(921)39-79-888">
+                +7(921)39-79-888
+              </SC.Link>
             </SC.Text>
             <SC.Text>
-              {t("Contacts.email")}:&nbsp;
+              {t('Contacts.email')}
+              :&nbsp;
               <SC.Link href="mailto:katerinadorohova@mail.ru">
                 katerinadorohova@mail.ru
               </SC.Link>

@@ -1,8 +1,8 @@
-import { rgba } from "polished";
-import styled from "styled-components";
+import { rgba } from 'polished';
+import styled from 'styled-components';
 
-import { Color, mediaQueries } from "@shared";
-import { TelegramIcon, WhatsappIcon } from "@shared/ui";
+import { Color, mediaQueries } from '@shared';
+import { TelegramIcon, WhatsappIcon } from '@shared/ui';
 
 export const Wrapper = styled.main`
   display: flex;

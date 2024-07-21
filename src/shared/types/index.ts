@@ -1,6 +1,6 @@
-export type LanguageType = "EN" | "RU";
+export type LanguageType = 'EN' | 'RU';
 
-export type PhotoRatioType = "VERTICAL" | "HORIZONTAL" | "SQUARE";
+export type PhotoRatioType = 'VERTICAL' | 'HORIZONTAL' | 'SQUARE';
 
 export interface LooseObject {
   [key: string]: string;

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { Color } from "@shared";
+import { Color } from '@shared';
 
 export const Overlay = styled.div`
   position: fixed;

@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { getPhotoPath } from "@shared/libs";
-import { useTranslation } from "@shared/hooks";
-import { PhotoWatcher } from "@entities/PhotoWatch";
-import type { Work } from "@entities/Work";
+import { useTranslation } from '@shared/hooks';
+import { getPhotoPath } from '@shared/libs';
 
-import { usePhotoColumns } from "../hooks";
-import * as SC from "./Gallery.styles";
+import { PhotoWatcher } from '@entities/PhotoWatch';
+import type { Work } from '@entities/Work';
+
+import { usePhotoColumns } from '../hooks';
+
+import * as SC from './Gallery.styles';
 
 interface GalleryProps {
   category: string;

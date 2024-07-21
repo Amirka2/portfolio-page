@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { Link as ReactLink } from "react-router-dom";
-import { rgba } from "polished";
+import { rgba } from 'polished';
+import { Link as ReactLink } from 'react-router-dom';
+import styled from 'styled-components';
 
-import { Color } from "@shared";
+import { Color } from '@shared';
 
 export const Header = styled.h5`
   font-size: 14px;

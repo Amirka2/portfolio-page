@@ -1,7 +1,7 @@
-import { Link as ReactLink } from "react-router-dom";
-import styled from "styled-components";
+import { Link as ReactLink } from 'react-router-dom';
+import styled from 'styled-components';
 
-import { Color } from "@shared/constants";
+import { Color } from '@shared/constants';
 
 export const Button = styled.button`
   width: 36px;
@@ -37,7 +37,7 @@ export const Wrapper = styled.div<{
 
   z-index: 1000000;
 
-  ${({isOpen}) => isOpen && `
+  ${({ isOpen }) => isOpen && `
     transform: translateX(0);
   `}
 

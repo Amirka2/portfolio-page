@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { mediaQueries } from "@shared/constants";
+import { mediaQueries } from '@shared/constants';
 
 export const Wrapper = styled.div`
   margin-top: 60px;
